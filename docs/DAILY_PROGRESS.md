@@ -33,12 +33,17 @@
    - 「先讀 skill」— 載入 creating-plugins skill 後 plugin 設計變更（standard 雙 entrypoint）
    - 「不是有 EmDash CLI 嗎，不香嗎」— 提醒 SQL dump 是錯路徑，CLI 才是 emdash-native 方式
 
+### 收工後補充
+
+- 🔑 **領導已完成 prod admin passkey 註冊**（晚安後補充） → v1.1.0 不再被 setup wizard 卡住
+
 ### 明日計劃 / v1.1.0 stretch goal
 
-1. 領導用瀏覽器完成 prod setup wizard（約 5 min Touch ID passkey 註冊）
-2. `npx emdash login --url <prod>` device-code 確認拿 token
+1. ~~prod setup wizard~~ ✅ 已完成（領導手動）
+2. `npx emdash login --url <prod>` device-code 確認拿 token（領導 1 次互動即可）
 3. 寫 Python 腳本讀 seed.json，對每個 collection / field / taxonomy / menu / content / media 一個個 emdash CLI push（約 20 min）
-4. （可選）custom domain + 課堂錄影教學 → 完整 v1.1.0 release
+4. 11 張媒體用 `emdash media upload --url <prod>`（已有 token 後純自動）
+5. （可選）custom domain + 課堂錄影教學 → 完整 v1.1.0 release
 
 ### 教學收穫（寫進未來課程教材）
 
