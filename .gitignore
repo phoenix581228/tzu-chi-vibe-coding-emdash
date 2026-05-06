@@ -9,6 +9,9 @@
 **/build/
 **/.output/
 
+# Wrangler / miniflare local state (regenerated on `pnpm dev` / `pnpm deploy`)
+**/.wrangler/
+
 # Dependencies
 **/node_modules/
 .pnpm-store/
