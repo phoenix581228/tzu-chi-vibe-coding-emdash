@@ -1,4 +1,6 @@
-MIT License
+================================================================================
+MIT License (English — official)
+================================================================================
 
 Copyright (c) 2026 Tzu Chi University Vibe Coding Lab and contributors
 
@@ -20,7 +22,40 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-This repository includes a copy of EmDash skills (in
+
+================================================================================
+MIT 授權條款（繁體中文 — 翻譯版本，僅供參考）
+================================================================================
+
+著作權所有 (c) 2026 慈濟大學 Vibe Coding 實驗室及貢獻者
+
+特此授權任何取得本軟體與相關文件檔案（以下簡稱「本軟體」）副本之人，
+得無限制地處理本軟體，包括但不限於使用、複製、修改、合併、發佈、散布、
+再授權及／或販售本軟體之副本之權利，並得允許本軟體之獲得者依下列條件為之：
+
+上述著作權聲明及本授權條款應一併包含於本軟體之所有副本或重要部分中。
+
+本軟體係「按現狀」提供，不附任何明示或默示之擔保，包括但不限於對適售性、
+特定用途之適用性及不侵權之擔保。在任何情況下，著作權人或著作權持有者對
+任何索賠、損害賠償或其他責任概不負責，無論其係因契約行為、侵權行為或其他
+事由所引起，亦不論其是否與本軟體或本軟體之使用或其他處理有關。
+
+法律效力說明：本中文版本為英文原版之翻譯，僅供閱讀方便。如中英文版本有
+歧異，以上方英文版本為準。
+The Chinese translation above is provided for reading convenience. In case of
+any discrepancy between the two language versions, the English version shall
+prevail.
+
+
+================================================================================
+Notice 附加說明 / Bundled Components
+================================================================================
+
+This repository includes a copy of EmDash skills (under
 `student-starter/.claude/skills/` and `poc/my-emdash-blog/.agents/skills/`)
 which are also released under MIT by Cloudflare. See
 https://github.com/emdash-cms/emdash for the upstream project.
+
+本倉庫附帶 EmDash 開源專案中的部分 skills 檔案（位於上述兩個目錄），這些
+檔案同樣以 MIT 授權釋出，著作權屬 Cloudflare。原專案位於
+https://github.com/emdash-cms/emdash。

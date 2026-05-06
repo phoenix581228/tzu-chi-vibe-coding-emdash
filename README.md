@@ -4,10 +4,17 @@
 > 慈濟大學 資訊科技與管理學系 大四 Vibe Coding 實機課程的完整教學產出
 > Complete teaching artefact of the Tzu Chi University ITM senior Vibe Coding lab
 >
-> Date: 2026-05-06 · License: MIT
+> Date: 2026-05-06 · License: [MIT](./LICENSE)（雙語授權聲明 / Bilingual licence text）
+
+| 語言 / Language | 內容 / Content |
+|:---|:---|
+| 🇹🇼 [繁體中文 ↓](#中文版) | 完整中文版 README |
+| 🇬🇧 [English ↓](#english-version) | Complete English README |
+| 🌳 [Repository Map ↓](#repository-map) | 目錄結構（雙語標註） |
 
 ---
 
+<a id="中文版"></a>
 ## 中文版
 
 ### 這是什麼
@@ -97,6 +104,7 @@ pnpm dev                          # → http://localhost:4321
 
 ---
 
+<a id="english-version"></a>
 ## English Version
 
 ### What is this
@@ -186,12 +194,13 @@ Other institutions are welcome to fork, use, modify, and redistribute under MIT.
 
 ---
 
-## Repository Map
+<a id="repository-map"></a>
+## Repository Map / 目錄結構
 
 ```
 tzu-chi-vibe-coding-emdash/
-├── README.md                      ← you are here
-├── LICENSE                        ← MIT
+├── README.md                      ← you are here / 即本文件
+├── LICENSE                        ← MIT (bilingual / 雙語)
 ├── .gitignore
 │
 ├── assets/
@@ -237,4 +246,6 @@ tzu-chi-vibe-coding-emdash/
 
 ---
 
-License: [MIT](./LICENSE) · Built 2026-05-06 in 2 hours by 12 students + Claude Code
+License / 授權: [MIT](./LICENSE)（雙語 / bilingual）
+
+Built / 建置於 2026-05-06 · 12 students + Claude Code · 2 hours / 兩小時內完成
