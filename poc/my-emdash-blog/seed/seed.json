@@ -393,8 +393,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "本網站是 **慈濟大學 資訊科技與管理學系 大四 Vibe Coding 實機課程** 的教學產物。",
-									"_key": "k1s"
+									"text": "本網站是 ",
+									"_key": "k1sa"
+								},
+								{
+									"_type": "span",
+									"text": "慈濟大學 資訊科技與管理學系 大四 Vibe Coding 實機課程",
+									"_key": "k1sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 的教學產物。",
+									"_key": "k1sc"
 								}
 							],
 							"_key": "k1"
@@ -453,8 +466,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**1. 下對指令的能力。** 不要說「寫一個部落格」；要說「在 EmDash 加一個 recipes collection，欄位是 name、photo、ingredients、steps」。具體、可驗收的需求才能換到精準的程式碼。",
-									"_key": "k6s"
+									"text": "1. 下對指令的能力。",
+									"_key": "k6sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 不要說「寫一個部落格」；要說「在 EmDash 加一個 recipes collection，欄位是 name、photo、ingredients、steps」。具體、可驗收的需求才能換到精準的程式碼。",
+									"_key": "k6sc"
 								}
 							],
 							"_key": "k6"
@@ -465,8 +486,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**2. 善用 skill 的能力。** Claude Code 載入領域 skill 後遠比 Google 精準。本課程示範如何把研究方法（technical-research）、程式碼分析（code-deep-analysis）、敏捷開發（agile-development）等抽象方法論，封裝成可被 AI 重用的 skill。",
-									"_key": "k7s"
+									"text": "2. 善用 skill 的能力。",
+									"_key": "k7sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " Claude Code 載入領域 skill 後遠比 Google 精準。本課程示範如何把研究方法（technical-research）、程式碼分析（code-deep-analysis）、敏捷開發（agile-development）等抽象方法論，封裝成可被 AI 重用的 skill。",
+									"_key": "k7sc"
 								}
 							],
 							"_key": "k7"
@@ -477,8 +506,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**3. 驗證 AI 結論的能力。** 我們在課堂上抓到三項公開文檔的錯誤（編輯器是 TipTap 不是 TinyMCE、Plugin sandbox 用 Worker Loader 不是 Workers for Platforms、MCP server 預設啟用），這些都是實際 git clone 原始碼比對才能發現的。盲信 AI 等於放棄工程責任。",
-									"_key": "k8s"
+									"text": "3. 驗證 AI 結論的能力。",
+									"_key": "k8sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 我們在課堂上抓到三項公開文檔的錯誤（編輯器是 TipTap 不是 TinyMCE、Plugin sandbox 用 Worker Loader 不是 Workers for Platforms、MCP server 預設啟用），這些都是實際 git clone 原始碼比對才能發現的。盲信 AI 等於放棄工程責任。",
+									"_key": "k8sc"
 								}
 							],
 							"_key": "k8"
@@ -549,8 +586,25 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**A. 教學 skill — `tzu-chi-vibe-coding-emdash`**：六階段流程（環境準備、技術研究、程式碼深度分析、本機 EmDash 安裝、第一個自訂 collection、Plugin 或 Cloudflare 部署）封裝成 Claude Code 可載入的 skill，學員回家後對 Claude Code 說「請載入 tzu-chi-vibe-coding-emdash skill 開始第 1 階段」即可重現整段流程。",
-									"_key": "k14s"
+									"text": "A. 教學 skill — ",
+									"_key": "k14sba",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "tzu-chi-vibe-coding-emdash",
+									"_key": "k14sbb",
+									"marks": [
+										"code",
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：六階段流程（環境準備、技術研究、程式碼深度分析、本機 EmDash 安裝、第一個自訂 collection、Plugin 或 Cloudflare 部署）封裝成 Claude Code 可載入的 skill，學員回家後對 Claude Code 說「請載入 tzu-chi-vibe-coding-emdash skill 開始第 1 階段」即可重現整段流程。",
+									"_key": "k14sc"
 								}
 							],
 							"_key": "k14"
@@ -561,8 +615,42 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**B. EmDash blog 自呈現教學內容**：本站 `/posts` 與 `/lessons` 收錄 3 份研究報告（中英共 6 篇文章）與 6 篇課程概要，並具備全站 zh / en 雙語切換、跨語言對等版本自動 redirect、cookie 持久化（一年）。",
-									"_key": "k15s"
+									"text": "B. EmDash blog 自呈現教學內容",
+									"_key": "k15sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：本站 ",
+									"_key": "k15sca"
+								},
+								{
+									"_type": "span",
+									"text": "/posts",
+									"_key": "k15scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 與 ",
+									"_key": "k15scca"
+								},
+								{
+									"_type": "span",
+									"text": "/lessons",
+									"_key": "k15sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 收錄 3 份研究報告（中英共 6 篇文章）與 6 篇課程概要，並具備全站 zh / en 雙語切換、跨語言對等版本自動 redirect、cookie 持久化（一年）。",
+									"_key": "k15sccc"
 								}
 							],
 							"_key": "k15"
@@ -573,8 +661,29 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**C. 學員 starter 倉庫**：`student-starter/` 含 README（雙語）、quickstart.sh 環境檢查腳本、3 份完整研究報告、6 道循序練習題（雙語）、8 個 Claude Code skills（7 EmDash 內建 + 1 教學）。學員 git clone 後可獨立進行回家學習。",
-									"_key": "k16s"
+									"text": "C. 學員 starter 倉庫",
+									"_key": "k16sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：",
+									"_key": "k16sca"
+								},
+								{
+									"_type": "span",
+									"text": "student-starter/",
+									"_key": "k16scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 含 README（雙語）、quickstart.sh 環境檢查腳本、3 份完整研究報告、6 道循序練習題（雙語）、8 個 Claude Code skills（7 EmDash 內建 + 1 教學）。學員 git clone 後可獨立進行回家學習。",
+									"_key": "k16scc"
 								}
 							],
 							"_key": "k16"
@@ -597,8 +706,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "本站採用：Astro 6.2 / EmDash 0.9 / TypeScript / SQLite (本機檔)/ React 19（Admin UI）/ Portable Text（內容）/ TipTap（富文字編輯器）/ pnpm 10.28 / Node 22+。完整深度分析請見 `/posts/research-code-zh`。",
-									"_key": "k18s"
+									"text": "本站採用：Astro 6.2 / EmDash 0.9 / TypeScript / SQLite (本機檔)/ React 19（Admin UI）/ Portable Text（內容）/ TipTap（富文字編輯器）/ pnpm 10.28 / Node 22+。完整深度分析請見 ",
+									"_key": "k18sa"
+								},
+								{
+									"_type": "span",
+									"text": "/posts/research-code-zh",
+									"_key": "k18sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "。",
+									"_key": "k18sc"
 								}
 							],
 							"_key": "k18"
@@ -669,8 +791,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "This website is the teaching artefact of the **Tzu Chi University, Department of Information Technology & Management — Senior Vibe Coding Lab**.",
-									"_key": "k1s"
+									"text": "This website is the teaching artefact of the ",
+									"_key": "k1sa"
+								},
+								{
+									"_type": "span",
+									"text": "Tzu Chi University, Department of Information Technology & Management — Senior Vibe Coding Lab",
+									"_key": "k1sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ".",
+									"_key": "k1sc"
 								}
 							],
 							"_key": "k1"
@@ -729,8 +864,29 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**1. Writing the right prompt.** Don't say \"build a blog.\" Say \"add a `recipes` collection to EmDash with fields name, photo, ingredients, steps.\" Concrete, testable specs translate to precise code.",
-									"_key": "k6s"
+									"text": "1. Writing the right prompt.",
+									"_key": "k6sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " Don't say \"build a blog.\" Say \"add a ",
+									"_key": "k6sca"
+								},
+								{
+									"_type": "span",
+									"text": "recipes",
+									"_key": "k6scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " collection to EmDash with fields name, photo, ingredients, steps.\" Concrete, testable specs translate to precise code.",
+									"_key": "k6scc"
 								}
 							],
 							"_key": "k6"
@@ -741,8 +897,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**2. Using skills well.** Claude Code with a domain skill loaded is far more precise than Google. The course shows how research methodology (technical-research), code analysis (code-deep-analysis), and agile development can be packaged as skills the AI re-uses.",
-									"_key": "k7s"
+									"text": "2. Using skills well.",
+									"_key": "k7sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " Claude Code with a domain skill loaded is far more precise than Google. The course shows how research methodology (technical-research), code analysis (code-deep-analysis), and agile development can be packaged as skills the AI re-uses.",
+									"_key": "k7sc"
 								}
 							],
 							"_key": "k7"
@@ -753,8 +917,29 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**3. Verifying AI claims.** During class we caught three errors in public documentation: the editor is TipTap, not TinyMCE; the plugin sandbox uses Worker Loader, not Workers for Platforms; the MCP server is enabled by default. None of these are visible without `git clone` and reading source. Blindly trusting the AI is abdicating engineering responsibility.",
-									"_key": "k8s"
+									"text": "3. Verifying AI claims.",
+									"_key": "k8sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " During class we caught three errors in public documentation: the editor is TipTap, not TinyMCE; the plugin sandbox uses Worker Loader, not Workers for Platforms; the MCP server is enabled by default. None of these are visible without ",
+									"_key": "k8sca"
+								},
+								{
+									"_type": "span",
+									"text": "git clone",
+									"_key": "k8scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " and reading source. Blindly trusting the AI is abdicating engineering responsibility.",
+									"_key": "k8scc"
 								}
 							],
 							"_key": "k8"
@@ -825,8 +1010,25 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**A. Teaching skill — `tzu-chi-vibe-coding-emdash`**: six phases (environment, technical research, code deep analysis, local EmDash install, first custom collection, plugin or Cloudflare deploy) packaged as a loadable Claude Code skill. At home, a student tells Claude Code \"please load the tzu-chi-vibe-coding-emdash skill and start phase 1\" to replay the entire flow.",
-									"_key": "k14s"
+									"text": "A. Teaching skill — ",
+									"_key": "k14sba",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "tzu-chi-vibe-coding-emdash",
+									"_key": "k14sbb",
+									"marks": [
+										"code",
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ": six phases (environment, technical research, code deep analysis, local EmDash install, first custom collection, plugin or Cloudflare deploy) packaged as a loadable Claude Code skill. At home, a student tells Claude Code \"please load the tzu-chi-vibe-coding-emdash skill and start phase 1\" to replay the entire flow.",
+									"_key": "k14sc"
 								}
 							],
 							"_key": "k14"
@@ -837,8 +1039,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**B. The EmDash site as the teaching surface**: this site's /posts and /lessons hold 3 research reports (6 bilingual articles) and 6 lesson summaries, with site-wide zh / en switching, cross-language equivalent-version redirect, and a one-year cookie.",
-									"_key": "k15s"
+									"text": "B. The EmDash site as the teaching surface",
+									"_key": "k15sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ": this site's /posts and /lessons hold 3 research reports (6 bilingual articles) and 6 lesson summaries, with site-wide zh / en switching, cross-language equivalent-version redirect, and a one-year cookie.",
+									"_key": "k15sc"
 								}
 							],
 							"_key": "k15"
@@ -849,8 +1059,55 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**C. Student starter repository**: `student-starter/` ships a bilingual README, a `quickstart.sh` environment check, the 3 full research reports, 6 sequential bilingual exercises, and 8 Claude Code skills (7 built-in + 1 course skill). Students `git clone` and continue at home.",
-									"_key": "k16s"
+									"text": "C. Student starter repository",
+									"_key": "k16sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ": ",
+									"_key": "k16sca"
+								},
+								{
+									"_type": "span",
+									"text": "student-starter/",
+									"_key": "k16scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " ships a bilingual README, a ",
+									"_key": "k16scca"
+								},
+								{
+									"_type": "span",
+									"text": "quickstart.sh",
+									"_key": "k16sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " environment check, the 3 full research reports, 6 sequential bilingual exercises, and 8 Claude Code skills (7 built-in + 1 course skill). Students ",
+									"_key": "k16sccca"
+								},
+								{
+									"_type": "span",
+									"text": "git clone",
+									"_key": "k16scccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " and continue at home.",
+									"_key": "k16scccc"
 								}
 							],
 							"_key": "k16"
@@ -873,8 +1130,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Astro 6.2 / EmDash 0.9 / TypeScript / SQLite (local file) / React 19 (Admin UI) / Portable Text / TipTap (rich-text editor) / pnpm 10.28 / Node 22+. See `/posts/research-code-en` for the full deep analysis.",
-									"_key": "k18s"
+									"text": "Astro 6.2 / EmDash 0.9 / TypeScript / SQLite (local file) / React 19 (Admin UI) / Portable Text / TipTap (rich-text editor) / pnpm 10.28 / Node 22+. See ",
+									"_key": "k18sa"
+								},
+								{
+									"_type": "span",
+									"text": "/posts/research-code-en",
+									"_key": "k18sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " for the full deep analysis.",
+									"_key": "k18sc"
 								}
 							],
 							"_key": "k18"
@@ -2592,8 +2862,76 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "本站文章本來在內文出現 `**bold**`、`` `code` `` 這種 markdown 寫法時，並沒有被渲染成粗體或行內程式碼，而是原樣輸出。原因是 EmDash 用的是 **Portable Text** — 一種結構化 JSON 內容格式，每個 span 必須透過 `marks: [\"strong\"]` 的方式宣告樣式，而不是接受 markdown 字串。",
-									"_key": "k2s"
+									"text": "本站文章本來在內文出現 `",
+									"_key": "k2sa"
+								},
+								{
+									"_type": "span",
+									"text": "bold",
+									"_key": "k2sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "、",
+									"_key": "k2scab",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " ",
+									"_key": "k2scacb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "code",
+									"_key": "k2scacca"
+								},
+								{
+									"_type": "span",
+									"text": " ",
+									"_key": "k2scaccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "` 這種 markdown 寫法時，並沒有被渲染成粗體或行內程式碼，而是原樣輸出。原因是 EmDash 用的是 ",
+									"_key": "k2scaccc"
+								},
+								{
+									"_type": "span",
+									"text": "Portable Text",
+									"_key": "k2scb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — 一種結構化 JSON 內容格式，每個 span 必須透過 ",
+									"_key": "k2scca"
+								},
+								{
+									"_type": "span",
+									"text": "marks: [\"strong\"]",
+									"_key": "k2sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 的方式宣告樣式，而不是接受 markdown 字串。",
+									"_key": "k2sccc"
 								}
 							],
 							"_key": "k2"
@@ -2604,8 +2942,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "我們最初寫進去的 portable text 把整段含 `**...**` 的文字直接放進一個 span，所以前端 PortableText 元件當然只能照原字串渲染。",
-									"_key": "k3s"
+									"text": "我們最初寫進去的 portable text 把整段含 `",
+									"_key": "k3sa"
+								},
+								{
+									"_type": "span",
+									"text": "...",
+									"_key": "k3sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "` 的文字直接放進一個 span，所以前端 PortableText 元件當然只能照原字串渲染。",
+									"_key": "k3sc"
 								}
 							],
 							"_key": "k3"
@@ -2628,8 +2979,42 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**A. 直接改 DB**：寫一個 Python script 連 SQLite，遍歷 `ec_*` 表的 `content` 欄位，重組 portable text JSON 寫回。",
-									"_key": "k5s"
+									"text": "A. 直接改 DB",
+									"_key": "k5sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：寫一個 Python script 連 SQLite，遍歷 ",
+									"_key": "k5sca"
+								},
+								{
+									"_type": "span",
+									"text": "ec_*",
+									"_key": "k5scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 表的 ",
+									"_key": "k5scca"
+								},
+								{
+									"_type": "span",
+									"text": "content",
+									"_key": "k5sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 欄位，重組 portable text JSON 寫回。",
+									"_key": "k5sccc"
 								}
 							],
 							"_key": "k5"
@@ -2640,8 +3025,42 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**B. 寫 EmDash plugin**：建立一個遵循官方 `definePlugin` API 的 plugin，掛 `content:beforeSave` hook，並提供一次性 migrate route 處理既有資料。",
-									"_key": "k6s"
+									"text": "B. 寫 EmDash plugin",
+									"_key": "k6sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：建立一個遵循官方 ",
+									"_key": "k6sca"
+								},
+								{
+									"_type": "span",
+									"text": "definePlugin",
+									"_key": "k6scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " API 的 plugin，掛 ",
+									"_key": "k6scca"
+								},
+								{
+									"_type": "span",
+									"text": "content:beforeSave",
+									"_key": "k6sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " hook，並提供一次性 migrate route 處理既有資料。",
+									"_key": "k6sccc"
 								}
 							],
 							"_key": "k6"
@@ -2652,8 +3071,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "我們選 B。理由是**未來相容性**：EmDash 仍在 v0.x，portable text schema 與內部表結構都可能調整；A 路線等於在資料層硬編一個假設，每次主版升級就有破裂風險。B 路線只用 EmDash 公開的 plugin 契約，跟著官方走。",
-									"_key": "k7s"
+									"text": "我們選 B。理由是",
+									"_key": "k7sa"
+								},
+								{
+									"_type": "span",
+									"text": "未來相容性",
+									"_key": "k7sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：EmDash 仍在 v0.x，portable text schema 與內部表結構都可能調整；A 路線等於在資料層硬編一個假設，每次主版升級就有破裂風險。B 路線只用 EmDash 公開的 plugin 契約，跟著官方走。",
+									"_key": "k7sc"
 								}
 							],
 							"_key": "k7"
@@ -2688,8 +3120,73 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "id `markdown-marks` v0.1.0；format `standard`（雙 entrypoint）；trusted 模式跑在 host process；capabilities `content:read` + `content:write`（migrate route 用 `ctx.content.list/update`）。",
-									"_key": "k10s"
+									"text": "id ",
+									"_key": "k10sa"
+								},
+								{
+									"_type": "span",
+									"text": "markdown-marks",
+									"_key": "k10sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " v0.1.0；format ",
+									"_key": "k10sca"
+								},
+								{
+									"_type": "span",
+									"text": "standard",
+									"_key": "k10scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "（雙 entrypoint）；trusted 模式跑在 host process；capabilities ",
+									"_key": "k10scca"
+								},
+								{
+									"_type": "span",
+									"text": "content:read",
+									"_key": "k10sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " + ",
+									"_key": "k10sccca"
+								},
+								{
+									"_type": "span",
+									"text": "content:write",
+									"_key": "k10scccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "（migrate route 用 ",
+									"_key": "k10scccca"
+								},
+								{
+									"_type": "span",
+									"text": "ctx.content.list/update",
+									"_key": "k10sccccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "）。",
+									"_key": "k10sccccc"
 								}
 							],
 							"_key": "k10"
@@ -2700,8 +3197,34 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "主要 hook：`content:beforeSave` priority 50, errorPolicy `continue` — 在儲存前把 spans 中尚未帶 marks 的 markdown 字串展開成多個 spans 加正確 marks。",
-									"_key": "k11s"
+									"text": "主要 hook：",
+									"_key": "k11sa"
+								},
+								{
+									"_type": "span",
+									"text": "content:beforeSave",
+									"_key": "k11sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " priority 50, errorPolicy ",
+									"_key": "k11sca"
+								},
+								{
+									"_type": "span",
+									"text": "continue",
+									"_key": "k11scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — 在儲存前把 spans 中尚未帶 marks 的 markdown 字串展開成多個 spans 加正確 marks。",
+									"_key": "k11scc"
 								}
 							],
 							"_key": "k11"
@@ -2724,8 +3247,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "`GET /_emdash/api/plugins/markdown-marks/status` 健康檢查 + 即場示範解析效果。",
-									"_key": "k13s"
+									"text": "GET /_emdash/api/plugins/markdown-marks/status",
+									"_key": "k13sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 健康檢查 + 即場示範解析效果。",
+									"_key": "k13sc"
 								}
 							],
 							"_key": "k13"
@@ -2736,8 +3267,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "`POST /_emdash/api/plugins/markdown-marks/migrate` 一鍵掃 posts/pages/lessons 既有 entries 跑同一支 transform。",
-									"_key": "k14s"
+									"text": "POST /_emdash/api/plugins/markdown-marks/migrate",
+									"_key": "k14sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 一鍵掃 posts/pages/lessons 既有 entries 跑同一支 transform。",
+									"_key": "k14sc"
 								}
 							],
 							"_key": "k14"
@@ -2772,8 +3311,30 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**`src/index.ts`** — 描述子工廠（descriptor factory），跑在 Vite build time。必須是 side-effect-free。回傳 `PluginDescriptor` 物件含 id / version / capabilities / entrypoint。",
-									"_key": "k17s"
+									"text": "src/index.ts",
+									"_key": "k17sbb",
+									"marks": [
+										"code",
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — 描述子工廠（descriptor factory），跑在 Vite build time。必須是 side-effect-free。回傳 ",
+									"_key": "k17sca"
+								},
+								{
+									"_type": "span",
+									"text": "PluginDescriptor",
+									"_key": "k17scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 物件含 id / version / capabilities / entrypoint。",
+									"_key": "k17scc"
 								}
 							],
 							"_key": "k17"
@@ -2784,8 +3345,30 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**`src/sandbox-entry.ts`** — 真正的 plugin 邏輯，跑在 deploy server runtime。`export default definePlugin({ hooks, routes })`。",
-									"_key": "k18s"
+									"text": "src/sandbox-entry.ts",
+									"_key": "k18sbb",
+									"marks": [
+										"code",
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — 真正的 plugin 邏輯，跑在 deploy server runtime。",
+									"_key": "k18sca"
+								},
+								{
+									"_type": "span",
+									"text": "export default definePlugin({ hooks, routes })",
+									"_key": "k18scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "。",
+									"_key": "k18scc"
 								}
 							],
 							"_key": "k18"
@@ -2796,8 +3379,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "兩者**不能合併**：一個跑在 Vite，一個跑在 V8 isolate；如果在 descriptor 那邊不小心 import runtime API，build 直接爆。skill 的 hooks reference 對這條規矩寫得很清楚。",
-									"_key": "k19s"
+									"text": "兩者",
+									"_key": "k19sa"
+								},
+								{
+									"_type": "span",
+									"text": "不能合併",
+									"_key": "k19sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：一個跑在 Vite，一個跑在 V8 isolate；如果在 descriptor 那邊不小心 import runtime API，build 直接爆。skill 的 hooks reference 對這條規矩寫得很清楚。",
+									"_key": "k19sc"
 								}
 							],
 							"_key": "k19"
@@ -2820,8 +3416,106 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "三個 regex pattern 依序：`**...**` → `` `...` `` → `*...*`。順序很重要 — 長 marker 先處理，避免 `**bold**` 被當成兩個 `*italic*`。同時 italic regex 要避開 `field_*` 這類非語意星號。",
-									"_key": "k21s"
+									"text": "三個 regex pattern 依序：`",
+									"_key": "k21sa"
+								},
+								{
+									"_type": "span",
+									"text": "...",
+									"_key": "k21sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " → ",
+									"_key": "k21scab",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " ",
+									"_key": "k21scacb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "...",
+									"_key": "k21scacca"
+								},
+								{
+									"_type": "span",
+									"text": " ",
+									"_key": "k21scaccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " → ",
+									"_key": "k21scacccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "...",
+									"_key": "k21scaccccab",
+									"marks": [
+										"em"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "。順序很重要 — 長 marker 先處理，避免 ",
+									"_key": "k21scaccccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "bold",
+									"_key": "k21scb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 被當成兩個 ",
+									"_key": "k21sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "italic",
+									"_key": "k21scccab",
+									"marks": [
+										"em"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "。同時 italic regex 要避開 ",
+									"_key": "k21scccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "field_*` 這類非語意星號。",
+									"_key": "k21scccc"
 								}
 							],
 							"_key": "k21"
@@ -2832,8 +3526,30 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "對單一 span 的 text 跑遞迴：找到第一個 marker 就把 text 拆成 before / inside / after 三段，inside 帶上對應 mark，遞迴處理 before 與 after。這樣 `**foo `code`**` 之類的巢狀也能展開。",
-									"_key": "k22s"
+									"text": "對單一 span 的 text 跑遞迴：找到第一個 marker 就把 text 拆成 before / inside / after 三段，inside 帶上對應 mark，遞迴處理 before 與 after。這樣 `",
+									"_key": "k22sa"
+								},
+								{
+									"_type": "span",
+									"text": "foo ",
+									"_key": "k22sba",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "code",
+									"_key": "k22sbb",
+									"marks": [
+										"code",
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "` 之類的巢狀也能展開。",
+									"_key": "k22sc"
 								}
 							],
 							"_key": "k22"
@@ -2844,8 +3560,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "整個函式組是純函式（pure）— 沒有任何 I/O，可以在 Vite build、Workers runtime、Node 任何環境跑。`expandPortableText()` 在沒有變更時回傳同一個 reference，避免 hot path 浪費記憶體。",
-									"_key": "k23s"
+									"text": "整個函式組是純函式（pure）— 沒有任何 I/O，可以在 Vite build、Workers runtime、Node 任何環境跑。",
+									"_key": "k23sa"
+								},
+								{
+									"_type": "span",
+									"text": "expandPortableText()",
+									"_key": "k23sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 在沒有變更時回傳同一個 reference，避免 hot path 浪費記憶體。",
+									"_key": "k23sc"
 								}
 							],
 							"_key": "k23"
@@ -2868,8 +3597,42 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "`content:beforeSave` 回傳的 content 會直接覆蓋掉原 content。我們的 hook 邏輯：能展開就回 `expandAllPortableTextFields(event.content)`；遇到例外則回 `undefined` 讓 EmDash 保留原內容（errorPolicy:continue 確保 save 不被擋）。",
-									"_key": "k25s"
+									"text": "content:beforeSave",
+									"_key": "k25sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 回傳的 content 會直接覆蓋掉原 content。我們的 hook 邏輯：能展開就回 ",
+									"_key": "k25sca"
+								},
+								{
+									"_type": "span",
+									"text": "expandAllPortableTextFields(event.content)",
+									"_key": "k25scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "；遇到例外則回 ",
+									"_key": "k25scca"
+								},
+								{
+									"_type": "span",
+									"text": "undefined",
+									"_key": "k25sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 讓 EmDash 保留原內容（errorPolicy:continue 確保 save 不被擋）。",
+									"_key": "k25sccc"
 								}
 							],
 							"_key": "k25"
@@ -2880,8 +3643,34 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "因為 `expandBlock` 會跳過已經帶 marks 的 span，hook **idempotent** — 同一篇文章連跑十次結果不變。",
-									"_key": "k26s"
+									"text": "因為 ",
+									"_key": "k26saa"
+								},
+								{
+									"_type": "span",
+									"text": "expandBlock",
+									"_key": "k26sab",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 會跳過已經帶 marks 的 span，hook ",
+									"_key": "k26sac"
+								},
+								{
+									"_type": "span",
+									"text": "idempotent",
+									"_key": "k26sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — 同一篇文章連跑十次結果不變。",
+									"_key": "k26sc"
 								}
 							],
 							"_key": "k26"
@@ -2904,8 +3693,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Hook 只在「之後新編輯儲存」時跑。但我們有 14 篇既存 entry 是「事前」就寫進 DB 的，所以另寫了 `/migrate` route 一鍵補跑。",
-									"_key": "k28s"
+									"text": "Hook 只在「之後新編輯儲存」時跑。但我們有 14 篇既存 entry 是「事前」就寫進 DB 的，所以另寫了 ",
+									"_key": "k28sa"
+								},
+								{
+									"_type": "span",
+									"text": "/migrate",
+									"_key": "k28sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " route 一鍵補跑。",
+									"_key": "k28sc"
 								}
 							],
 							"_key": "k28"
@@ -2916,8 +3718,47 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Route 邏輯：對每個目標 collection 用 `ctx.content.list({ limit, cursor })` 翻頁，每筆透過 `expandAllPortableTextFields(item.data)` 計算新版本，差異欄位才呼叫 `ctx.content.update(collection, id, patch)`。",
-									"_key": "k29s"
+									"text": "Route 邏輯：對每個目標 collection 用 ",
+									"_key": "k29sa"
+								},
+								{
+									"_type": "span",
+									"text": "ctx.content.list({ limit, cursor })",
+									"_key": "k29sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 翻頁，每筆透過 ",
+									"_key": "k29sca"
+								},
+								{
+									"_type": "span",
+									"text": "expandAllPortableTextFields(item.data)",
+									"_key": "k29scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 計算新版本，差異欄位才呼叫 ",
+									"_key": "k29scca"
+								},
+								{
+									"_type": "span",
+									"text": "ctx.content.update(collection, id, patch)",
+									"_key": "k29sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "。",
+									"_key": "k29sccc"
 								}
 							],
 							"_key": "k29"
@@ -2952,8 +3793,47 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Plugin 用 npm `file:` 協定本地引用：`\"@local/markdown-marks\": \"file:./plugins/markdown-marks\"` 寫進 my-emdash-blog/package.json。`pnpm install` 讓 pnpm 建 symlink。",
-									"_key": "k32s"
+									"text": "Plugin 用 npm ",
+									"_key": "k32sa"
+								},
+								{
+									"_type": "span",
+									"text": "file:",
+									"_key": "k32sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 協定本地引用：",
+									"_key": "k32sca"
+								},
+								{
+									"_type": "span",
+									"text": "\"@local/markdown-marks\": \"file:./plugins/markdown-marks\"",
+									"_key": "k32scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 寫進 my-emdash-blog/package.json。",
+									"_key": "k32scca"
+								},
+								{
+									"_type": "span",
+									"text": "pnpm install",
+									"_key": "k32sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 讓 pnpm 建 symlink。",
+									"_key": "k32sccc"
 								}
 							],
 							"_key": "k32"
@@ -2964,8 +3844,34 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "astro.config.mjs 內 `import { markdownMarksPlugin } from \"@local/markdown-marks\"`，加到 `emdash({ plugins: [auditLogPlugin(), markdownMarksPlugin()] })`。重啟 dev server 即生效。",
-									"_key": "k33s"
+									"text": "astro.config.mjs 內 ",
+									"_key": "k33sa"
+								},
+								{
+									"_type": "span",
+									"text": "import { markdownMarksPlugin } from \"@local/markdown-marks\"",
+									"_key": "k33sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "，加到 ",
+									"_key": "k33sca"
+								},
+								{
+									"_type": "span",
+									"text": "emdash({ plugins: [auditLogPlugin(), markdownMarksPlugin()] })",
+									"_key": "k33scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "。重啟 dev server 即生效。",
+									"_key": "k33scc"
 								}
 							],
 							"_key": "k33"
@@ -2976,8 +3882,47 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Plugin descriptor 的 `entrypoint` 字串是 `\"@local/markdown-marks/sandbox\"`，對應 plugin 自家 package.json 的 `\"./sandbox\"` export — 也就是 sandbox-entry.ts。",
-									"_key": "k34s"
+									"text": "Plugin descriptor 的 ",
+									"_key": "k34sa"
+								},
+								{
+									"_type": "span",
+									"text": "entrypoint",
+									"_key": "k34sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 字串是 ",
+									"_key": "k34sca"
+								},
+								{
+									"_type": "span",
+									"text": "\"@local/markdown-marks/sandbox\"",
+									"_key": "k34scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "，對應 plugin 自家 package.json 的 ",
+									"_key": "k34scca"
+								},
+								{
+									"_type": "span",
+									"text": "\"./sandbox\"",
+									"_key": "k34sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " export — 也就是 sandbox-entry.ts。",
+									"_key": "k34sccc"
 								}
 							],
 							"_key": "k34"
@@ -3000,8 +3945,72 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**1. `public: true` 沒讓 route 真的 public。** 文檔說 standard plugin route 加 `public: true` 就跳過認證，但實測 `/_emdash/api/plugins/markdown-marks/status` 仍回 401 UNAUTHORIZED。可能是新版本對 plugin route 加了一層 admin gate。解法：用 EmDash 內建的 dev-bypass：`GET /_emdash/api/setup/dev-bypass?redirect=/_emdash/admin` 自動建立 dev admin session，後續帶 cookie 就過。生產環境必須改用 admin token。",
-									"_key": "k36s"
+									"text": "1. ",
+									"_key": "k36sba",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "public: true",
+									"_key": "k36sbb",
+									"marks": [
+										"code",
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 沒讓 route 真的 public。",
+									"_key": "k36sbc",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 文檔說 standard plugin route 加 ",
+									"_key": "k36sca"
+								},
+								{
+									"_type": "span",
+									"text": "public: true",
+									"_key": "k36scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 就跳過認證，但實測 ",
+									"_key": "k36scca"
+								},
+								{
+									"_type": "span",
+									"text": "/_emdash/api/plugins/markdown-marks/status",
+									"_key": "k36sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 仍回 401 UNAUTHORIZED。可能是新版本對 plugin route 加了一層 admin gate。解法：用 EmDash 內建的 dev-bypass：",
+									"_key": "k36sccca"
+								},
+								{
+									"_type": "span",
+									"text": "GET /_emdash/api/setup/dev-bypass?redirect=/_emdash/admin",
+									"_key": "k36scccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 自動建立 dev admin session，後續帶 cookie 就過。生產環境必須改用 admin token。",
+									"_key": "k36scccc"
 								}
 							],
 							"_key": "k36"
@@ -3012,8 +4021,29 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**2. Sandbox 模組不熱重載。** 改 sandbox-entry.ts 後，dev server 不會自動 reload plugin code，要 `kill $(lsof -ti :4321)` 重啟。",
-									"_key": "k37s"
+									"text": "2. Sandbox 模組不熱重載。",
+									"_key": "k37sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 改 sandbox-entry.ts 後，dev server 不會自動 reload plugin code，要 ",
+									"_key": "k37sca"
+								},
+								{
+									"_type": "span",
+									"text": "kill $(lsof -ti :4321)",
+									"_key": "k37scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " 重啟。",
+									"_key": "k37scc"
 								}
 							],
 							"_key": "k37"
@@ -3024,8 +4054,29 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**3. CSRF header。** state-changing 的 plugin route（POST migrate）必須帶 `X-EmDash-Request: 1` header，否則 403 CSRF_REJECTED。這是 EmDash 整體 API 的規範，plugin route 也適用。",
-									"_key": "k38s"
+									"text": "3. CSRF header。",
+									"_key": "k38sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " state-changing 的 plugin route（POST migrate）必須帶 ",
+									"_key": "k38sca"
+								},
+								{
+									"_type": "span",
+									"text": "X-EmDash-Request: 1",
+									"_key": "k38scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " header，否則 403 CSRF_REJECTED。這是 EmDash 整體 API 的規範，plugin route 也適用。",
+									"_key": "k38scc"
 								}
 							],
 							"_key": "k38"
@@ -3048,8 +4099,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "這個 plugin 對學員是**最完整的真實案例**：",
-									"_key": "k40s"
+									"text": "這個 plugin 對學員是",
+									"_key": "k40sa"
+								},
+								{
+									"_type": "span",
+									"text": "最完整的真實案例",
+									"_key": "k40sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：",
+									"_key": "k40sc"
 								}
 							],
 							"_key": "k40"
@@ -3060,8 +4124,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "(1) 從一個具體可見的問題出發（為什麼 `**bold**` 沒變粗？），(2) 用 plugin 而不是 patch DB（理解「為何要相容於框架契約」），(3) 涵蓋 hook + route + capability 三大 plugin feature，(4) 包含 migrate 解決「既有資料」這個真實系統會遇到的問題。",
-									"_key": "k41s"
+									"text": "(1) 從一個具體可見的問題出發（為什麼 `",
+									"_key": "k41sa"
+								},
+								{
+									"_type": "span",
+									"text": "bold",
+									"_key": "k41sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "` 沒變粗？），(2) 用 plugin 而不是 patch DB（理解「為何要相容於框架契約」），(3) 涵蓋 hook + route + capability 三大 plugin feature，(4) 包含 migrate 解決「既有資料」這個真實系統會遇到的問題。",
+									"_key": "k41sc"
 								}
 							],
 							"_key": "k41"
@@ -3072,8 +4149,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Plugin 已複製到 `student-starter/plugins-example/`，學員 git clone 即可取得整套程式碼當教材參考。",
-									"_key": "k42s"
+									"text": "Plugin 已複製到 ",
+									"_key": "k42sa"
+								},
+								{
+									"_type": "span",
+									"text": "student-starter/plugins-example/",
+									"_key": "k42sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "，學員 git clone 即可取得整套程式碼當教材參考。",
+									"_key": "k42sc"
 								}
 							],
 							"_key": "k42"
@@ -3096,8 +4186,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "「為什麼不要直接改 DB」其實就是一句話：**寫應用，不寫 hack**。這個 plugin 從 git clone EmDash 原始碼、讀 creating-plugins skill、設計 + 實作 + 驗證一條龍，總共約 35 分鐘。比起多寫一支 SQL 多花 25 分鐘，但換來的是「未來 EmDash 升級不會炸」這個保證 — 對教學示範與未來真實採用來說，這 25 分鐘絕對值得。",
-									"_key": "k44s"
+									"text": "「為什麼不要直接改 DB」其實就是一句話：",
+									"_key": "k44sa"
+								},
+								{
+									"_type": "span",
+									"text": "寫應用，不寫 hack",
+									"_key": "k44sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "。這個 plugin 從 git clone EmDash 原始碼、讀 creating-plugins skill、設計 + 實作 + 驗證一條龍，總共約 35 分鐘。比起多寫一支 SQL 多花 25 分鐘，但換來的是「未來 EmDash 升級不會炸」這個保證 — 對教學示範與未來真實採用來說，這 25 分鐘絕對值得。",
+									"_key": "k44sc"
 								}
 							],
 							"_key": "k44"
@@ -3152,8 +4255,76 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Articles on this site contained inline `**bold**` and `` `code` `` markers, but they rendered as literal text rather than as bold or inline code. EmDash uses **Portable Text** — a structured JSON content format where each span declares formatting via `marks: [\"strong\"]`, not by parsing markdown strings.",
-									"_key": "k2s"
+									"text": "Articles on this site contained inline `",
+									"_key": "k2sa"
+								},
+								{
+									"_type": "span",
+									"text": "bold",
+									"_key": "k2sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " and ",
+									"_key": "k2scab",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " ",
+									"_key": "k2scacb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "code",
+									"_key": "k2scacca"
+								},
+								{
+									"_type": "span",
+									"text": " ",
+									"_key": "k2scaccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "` markers, but they rendered as literal text rather than as bold or inline code. EmDash uses ",
+									"_key": "k2scaccc"
+								},
+								{
+									"_type": "span",
+									"text": "Portable Text",
+									"_key": "k2scb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — a structured JSON content format where each span declares formatting via ",
+									"_key": "k2scca"
+								},
+								{
+									"_type": "span",
+									"text": "marks: [\"strong\"]",
+									"_key": "k2sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ", not by parsing markdown strings.",
+									"_key": "k2sccc"
 								}
 							],
 							"_key": "k2"
@@ -3164,8 +4335,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Our initial portable text just stuffed the whole `**...**` line into one span — so the PortableText component had no choice but to render it verbatim.",
-									"_key": "k3s"
+									"text": "Our initial portable text just stuffed the whole `",
+									"_key": "k3sa"
+								},
+								{
+									"_type": "span",
+									"text": "...",
+									"_key": "k3sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "` line into one span — so the PortableText component had no choice but to render it verbatim.",
+									"_key": "k3sc"
 								}
 							],
 							"_key": "k3"
@@ -3188,8 +4372,42 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**A. Patch the DB directly**: write a Python script that opens SQLite, walks every `ec_*` table's `content` field, rebuilds the portable-text JSON, and writes it back.",
-									"_key": "k5s"
+									"text": "A. Patch the DB directly",
+									"_key": "k5sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ": write a Python script that opens SQLite, walks every ",
+									"_key": "k5sca"
+								},
+								{
+									"_type": "span",
+									"text": "ec_*",
+									"_key": "k5scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " table's ",
+									"_key": "k5scca"
+								},
+								{
+									"_type": "span",
+									"text": "content",
+									"_key": "k5sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " field, rebuilds the portable-text JSON, and writes it back.",
+									"_key": "k5sccc"
 								}
 							],
 							"_key": "k5"
@@ -3200,8 +4418,42 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**B. Build an EmDash plugin**: implement `definePlugin` per EmDash's official API, attach a `content:beforeSave` hook, and provide a one-shot migrate route for existing content.",
-									"_key": "k6s"
+									"text": "B. Build an EmDash plugin",
+									"_key": "k6sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ": implement ",
+									"_key": "k6sca"
+								},
+								{
+									"_type": "span",
+									"text": "definePlugin",
+									"_key": "k6scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " per EmDash's official API, attach a ",
+									"_key": "k6scca"
+								},
+								{
+									"_type": "span",
+									"text": "content:beforeSave",
+									"_key": "k6sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " hook, and provide a one-shot migrate route for existing content.",
+									"_key": "k6sccc"
 								}
 							],
 							"_key": "k6"
@@ -3212,8 +4464,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "We chose B. The reason is **future compatibility**: EmDash is still v0.x, and the portable-text schema and internal table layout may shift. Path A bakes assumptions into the data layer that will break on every major upgrade. Path B uses only EmDash's published plugin contract — we move when EmDash moves.",
-									"_key": "k7s"
+									"text": "We chose B. The reason is ",
+									"_key": "k7sa"
+								},
+								{
+									"_type": "span",
+									"text": "future compatibility",
+									"_key": "k7sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ": EmDash is still v0.x, and the portable-text schema and internal table layout may shift. Path A bakes assumptions into the data layer that will break on every major upgrade. Path B uses only EmDash's published plugin contract — we move when EmDash moves.",
+									"_key": "k7sc"
 								}
 							],
 							"_key": "k7"
@@ -3236,8 +4501,73 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Plugin spec: id `markdown-marks` v0.1.0; format `standard` (dual entrypoint); trusted execution; capabilities `content:read` + `content:write` for the migrate route's `ctx.content.list/update`.",
-									"_key": "k9s"
+									"text": "Plugin spec: id ",
+									"_key": "k9sa"
+								},
+								{
+									"_type": "span",
+									"text": "markdown-marks",
+									"_key": "k9sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " v0.1.0; format ",
+									"_key": "k9sca"
+								},
+								{
+									"_type": "span",
+									"text": "standard",
+									"_key": "k9scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " (dual entrypoint); trusted execution; capabilities ",
+									"_key": "k9scca"
+								},
+								{
+									"_type": "span",
+									"text": "content:read",
+									"_key": "k9sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " + ",
+									"_key": "k9sccca"
+								},
+								{
+									"_type": "span",
+									"text": "content:write",
+									"_key": "k9scccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " for the migrate route's ",
+									"_key": "k9scccca"
+								},
+								{
+									"_type": "span",
+									"text": "ctx.content.list/update",
+									"_key": "k9sccccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ".",
+									"_key": "k9sccccc"
 								}
 							],
 							"_key": "k9"
@@ -3248,8 +4578,47 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Primary hook: `content:beforeSave`, priority 50, errorPolicy `continue` — before save, expand any markdown markers in spans without existing `marks` into multiple spans with proper marks.",
-									"_key": "k10s"
+									"text": "Primary hook: ",
+									"_key": "k10sa"
+								},
+								{
+									"_type": "span",
+									"text": "content:beforeSave",
+									"_key": "k10sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ", priority 50, errorPolicy ",
+									"_key": "k10sca"
+								},
+								{
+									"_type": "span",
+									"text": "continue",
+									"_key": "k10scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — before save, expand any markdown markers in spans without existing ",
+									"_key": "k10scca"
+								},
+								{
+									"_type": "span",
+									"text": "marks",
+									"_key": "k10sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " into multiple spans with proper marks.",
+									"_key": "k10sccc"
 								}
 							],
 							"_key": "k10"
@@ -3260,8 +4629,34 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Auxiliary routes: `GET /_emdash/api/plugins/markdown-marks/status` for a health check + live demo; `POST /_emdash/api/plugins/markdown-marks/migrate` to sweep existing posts/pages/lessons through the same transform.",
-									"_key": "k11s"
+									"text": "Auxiliary routes: ",
+									"_key": "k11sa"
+								},
+								{
+									"_type": "span",
+									"text": "GET /_emdash/api/plugins/markdown-marks/status",
+									"_key": "k11sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " for a health check + live demo; ",
+									"_key": "k11sca"
+								},
+								{
+									"_type": "span",
+									"text": "POST /_emdash/api/plugins/markdown-marks/migrate",
+									"_key": "k11scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " to sweep existing posts/pages/lessons through the same transform.",
+									"_key": "k11scc"
 								}
 							],
 							"_key": "k11"
@@ -3296,8 +4691,30 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**`src/index.ts`** — descriptor factory, runs at Vite build time. Must be side-effect-free. Returns a `PluginDescriptor` (id / version / capabilities / entrypoint).",
-									"_key": "k14s"
+									"text": "src/index.ts",
+									"_key": "k14sbb",
+									"marks": [
+										"code",
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — descriptor factory, runs at Vite build time. Must be side-effect-free. Returns a ",
+									"_key": "k14sca"
+								},
+								{
+									"_type": "span",
+									"text": "PluginDescriptor",
+									"_key": "k14scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " (id / version / capabilities / entrypoint).",
+									"_key": "k14scc"
 								}
 							],
 							"_key": "k14"
@@ -3308,8 +4725,30 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**`src/sandbox-entry.ts`** — actual plugin logic, runs at request time on the deployed server. `export default definePlugin({ hooks, routes })`.",
-									"_key": "k15s"
+									"text": "src/sandbox-entry.ts",
+									"_key": "k15sbb",
+									"marks": [
+										"code",
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — actual plugin logic, runs at request time on the deployed server. ",
+									"_key": "k15sca"
+								},
+								{
+									"_type": "span",
+									"text": "export default definePlugin({ hooks, routes })",
+									"_key": "k15scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ".",
+									"_key": "k15scc"
 								}
 							],
 							"_key": "k15"
@@ -3344,8 +4783,106 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Three regex patterns, in this order: `**...**` → `` `...` `` → `*...*`. Order matters — longer markers first, otherwise `**bold**` decomposes into two `*italic*`. The italic regex also avoids `field_*` and word-boundary stars to keep non-semantic asterisks literal.",
-									"_key": "k18s"
+									"text": "Three regex patterns, in this order: `",
+									"_key": "k18sa"
+								},
+								{
+									"_type": "span",
+									"text": "...",
+									"_key": "k18sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " → ",
+									"_key": "k18scab",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " ",
+									"_key": "k18scacb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "...",
+									"_key": "k18scacca"
+								},
+								{
+									"_type": "span",
+									"text": " ",
+									"_key": "k18scaccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " → ",
+									"_key": "k18scacccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "...",
+									"_key": "k18scaccccab",
+									"marks": [
+										"em"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ". Order matters — longer markers first, otherwise ",
+									"_key": "k18scaccccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "bold",
+									"_key": "k18scb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " decomposes into two ",
+									"_key": "k18sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "italic",
+									"_key": "k18scccab",
+									"marks": [
+										"em"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ". The italic regex also avoids ",
+									"_key": "k18scccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "field_*` and word-boundary stars to keep non-semantic asterisks literal.",
+									"_key": "k18scccc"
 								}
 							],
 							"_key": "k18"
@@ -3356,8 +4893,30 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "For each span text, recursion: find the first marker, split into before / inside / after, apply the mark to the recursed inside, and recurse on before and after as well. That gives nested handling for cases like `**foo `code`**` for free.",
-									"_key": "k19s"
+									"text": "For each span text, recursion: find the first marker, split into before / inside / after, apply the mark to the recursed inside, and recurse on before and after as well. That gives nested handling for cases like `",
+									"_key": "k19sa"
+								},
+								{
+									"_type": "span",
+									"text": "foo ",
+									"_key": "k19sba",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "code",
+									"_key": "k19sbb",
+									"marks": [
+										"code",
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "` for free.",
+									"_key": "k19sc"
 								}
 							],
 							"_key": "k19"
@@ -3368,8 +4927,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "All functions are pure — zero I/O, safe to run in Vite, Workers, or Node. `expandPortableText()` returns the same reference when nothing changes, keeping the hot path allocation-light.",
-									"_key": "k20s"
+									"text": "All functions are pure — zero I/O, safe to run in Vite, Workers, or Node. ",
+									"_key": "k20sa"
+								},
+								{
+									"_type": "span",
+									"text": "expandPortableText()",
+									"_key": "k20sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " returns the same reference when nothing changes, keeping the hot path allocation-light.",
+									"_key": "k20sc"
 								}
 							],
 							"_key": "k20"
@@ -3392,8 +4964,68 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "`content:beforeSave` returns either modified content (which replaces the original) or `undefined` (which keeps it). We return `expandAllPortableTextFields(event.content)` on success and `undefined` on exception, so a malformed input never blocks the save (errorPolicy `continue` reinforces this).",
-									"_key": "k22s"
+									"text": "content:beforeSave",
+									"_key": "k22sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " returns either modified content (which replaces the original) or ",
+									"_key": "k22sca"
+								},
+								{
+									"_type": "span",
+									"text": "undefined",
+									"_key": "k22scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " (which keeps it). We return ",
+									"_key": "k22scca"
+								},
+								{
+									"_type": "span",
+									"text": "expandAllPortableTextFields(event.content)",
+									"_key": "k22sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " on success and ",
+									"_key": "k22sccca"
+								},
+								{
+									"_type": "span",
+									"text": "undefined",
+									"_key": "k22scccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " on exception, so a malformed input never blocks the save (errorPolicy ",
+									"_key": "k22scccca"
+								},
+								{
+									"_type": "span",
+									"text": "continue",
+									"_key": "k22sccccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " reinforces this).",
+									"_key": "k22sccccc"
 								}
 							],
 							"_key": "k22"
@@ -3404,8 +5036,34 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Because `expandBlock` skips spans that already carry marks, the hook is **idempotent** — re-running on the same article ten times yields the same result.",
-									"_key": "k23s"
+									"text": "Because ",
+									"_key": "k23saa"
+								},
+								{
+									"_type": "span",
+									"text": "expandBlock",
+									"_key": "k23sab",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " skips spans that already carry marks, the hook is ",
+									"_key": "k23sac"
+								},
+								{
+									"_type": "span",
+									"text": "idempotent",
+									"_key": "k23sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — re-running on the same article ten times yields the same result.",
+									"_key": "k23sc"
 								}
 							],
 							"_key": "k23"
@@ -3428,8 +5086,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The hook only fires on future saves. We had 14 entries pre-dating the plugin, so we wrote the `/migrate` route to backfill.",
-									"_key": "k25s"
+									"text": "The hook only fires on future saves. We had 14 entries pre-dating the plugin, so we wrote the ",
+									"_key": "k25sa"
+								},
+								{
+									"_type": "span",
+									"text": "/migrate",
+									"_key": "k25sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " route to backfill.",
+									"_key": "k25sc"
 								}
 							],
 							"_key": "k25"
@@ -3440,8 +5111,47 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Route logic: for each target collection, paginate with `ctx.content.list({ limit, cursor })`. For each item, compute the expanded version with `expandAllPortableTextFields(item.data)`, and call `ctx.content.update(collection, id, patch)` with only the fields that actually changed.",
-									"_key": "k26s"
+									"text": "Route logic: for each target collection, paginate with ",
+									"_key": "k26sa"
+								},
+								{
+									"_type": "span",
+									"text": "ctx.content.list({ limit, cursor })",
+									"_key": "k26sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ". For each item, compute the expanded version with ",
+									"_key": "k26sca"
+								},
+								{
+									"_type": "span",
+									"text": "expandAllPortableTextFields(item.data)",
+									"_key": "k26scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ", and call ",
+									"_key": "k26scca"
+								},
+								{
+									"_type": "span",
+									"text": "ctx.content.update(collection, id, patch)",
+									"_key": "k26sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " with only the fields that actually changed.",
+									"_key": "k26sccc"
 								}
 							],
 							"_key": "k26"
@@ -3476,8 +5186,60 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The plugin is referenced via npm's `file:` protocol: `\"@local/markdown-marks\": \"file:./plugins/markdown-marks\"` in `my-emdash-blog/package.json`. `pnpm install` builds the symlink.",
-									"_key": "k29s"
+									"text": "The plugin is referenced via npm's ",
+									"_key": "k29sa"
+								},
+								{
+									"_type": "span",
+									"text": "file:",
+									"_key": "k29sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " protocol: ",
+									"_key": "k29sca"
+								},
+								{
+									"_type": "span",
+									"text": "\"@local/markdown-marks\": \"file:./plugins/markdown-marks\"",
+									"_key": "k29scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " in ",
+									"_key": "k29scca"
+								},
+								{
+									"_type": "span",
+									"text": "my-emdash-blog/package.json",
+									"_key": "k29sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ". ",
+									"_key": "k29sccca"
+								},
+								{
+									"_type": "span",
+									"text": "pnpm install",
+									"_key": "k29scccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " builds the symlink.",
+									"_key": "k29scccc"
 								}
 							],
 							"_key": "k29"
@@ -3488,8 +5250,47 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "In `astro.config.mjs`: `import { markdownMarksPlugin } from \"@local/markdown-marks\"`, then add it to `emdash({ plugins: [auditLogPlugin(), markdownMarksPlugin()] })`. Restart the dev server.",
-									"_key": "k30s"
+									"text": "In ",
+									"_key": "k30sa"
+								},
+								{
+									"_type": "span",
+									"text": "astro.config.mjs",
+									"_key": "k30sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ": ",
+									"_key": "k30sca"
+								},
+								{
+									"_type": "span",
+									"text": "import { markdownMarksPlugin } from \"@local/markdown-marks\"",
+									"_key": "k30scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ", then add it to ",
+									"_key": "k30scca"
+								},
+								{
+									"_type": "span",
+									"text": "emdash({ plugins: [auditLogPlugin(), markdownMarksPlugin()] })",
+									"_key": "k30sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ". Restart the dev server.",
+									"_key": "k30sccc"
 								}
 							],
 							"_key": "k30"
@@ -3500,8 +5301,47 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The descriptor's `entrypoint` string is `\"@local/markdown-marks/sandbox\"`, which resolves to the `\"./sandbox\"` export in the plugin's package.json — i.e. sandbox-entry.ts.",
-									"_key": "k31s"
+									"text": "The descriptor's ",
+									"_key": "k31sa"
+								},
+								{
+									"_type": "span",
+									"text": "entrypoint",
+									"_key": "k31sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " string is ",
+									"_key": "k31sca"
+								},
+								{
+									"_type": "span",
+									"text": "\"@local/markdown-marks/sandbox\"",
+									"_key": "k31scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ", which resolves to the ",
+									"_key": "k31scca"
+								},
+								{
+									"_type": "span",
+									"text": "\"./sandbox\"",
+									"_key": "k31sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " export in the plugin's package.json — i.e. sandbox-entry.ts.",
+									"_key": "k31sccc"
 								}
 							],
 							"_key": "k31"
@@ -3524,8 +5364,59 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**1. `public: true` doesn't actually expose the route.** The skill says public routes skip auth, but in practice `/_emdash/api/plugins/markdown-marks/status` returned 401 UNAUTHORIZED. The current EmDash version seems to wrap plugin routes in an admin gate. Workaround: use the built-in dev bypass — `GET /_emdash/api/setup/dev-bypass?redirect=/_emdash/admin` mints a dev admin session, and cookie-bound subsequent calls work. Production deployments must use a real admin token instead.",
-									"_key": "k33s"
+									"text": "1. ",
+									"_key": "k33sba",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "public: true",
+									"_key": "k33sbb",
+									"marks": [
+										"code",
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " doesn't actually expose the route.",
+									"_key": "k33sbc",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " The skill says public routes skip auth, but in practice ",
+									"_key": "k33sca"
+								},
+								{
+									"_type": "span",
+									"text": "/_emdash/api/plugins/markdown-marks/status",
+									"_key": "k33scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " returned 401 UNAUTHORIZED. The current EmDash version seems to wrap plugin routes in an admin gate. Workaround: use the built-in dev bypass — ",
+									"_key": "k33scca"
+								},
+								{
+									"_type": "span",
+									"text": "GET /_emdash/api/setup/dev-bypass?redirect=/_emdash/admin",
+									"_key": "k33sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " mints a dev admin session, and cookie-bound subsequent calls work. Production deployments must use a real admin token instead.",
+									"_key": "k33sccc"
 								}
 							],
 							"_key": "k33"
@@ -3536,8 +5427,29 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**2. Sandbox modules don't hot-reload.** Edits to sandbox-entry.ts don't reload — `kill $(lsof -ti :4321)` and restart.",
-									"_key": "k34s"
+									"text": "2. Sandbox modules don't hot-reload.",
+									"_key": "k34sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " Edits to sandbox-entry.ts don't reload — ",
+									"_key": "k34sca"
+								},
+								{
+									"_type": "span",
+									"text": "kill $(lsof -ti :4321)",
+									"_key": "k34scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " and restart.",
+									"_key": "k34scc"
 								}
 							],
 							"_key": "k34"
@@ -3548,8 +5460,42 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "**3. CSRF header.** State-changing plugin routes (POST `/migrate`) require `X-EmDash-Request: 1`, otherwise 403 CSRF_REJECTED. This applies to all EmDash APIs, plugins included.",
-									"_key": "k35s"
+									"text": "3. CSRF header.",
+									"_key": "k35sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " State-changing plugin routes (POST ",
+									"_key": "k35sca"
+								},
+								{
+									"_type": "span",
+									"text": "/migrate",
+									"_key": "k35scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ") require ",
+									"_key": "k35scca"
+								},
+								{
+									"_type": "span",
+									"text": "X-EmDash-Request: 1",
+									"_key": "k35sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ", otherwise 403 CSRF_REJECTED. This applies to all EmDash APIs, plugins included.",
+									"_key": "k35sccc"
 								}
 							],
 							"_key": "k35"
@@ -3584,8 +5530,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "(1) starts from a visible bug (\"why isn't `**bold**` bold?\"), (2) uses a plugin instead of a DB patch (the lesson on \"respect the framework's contract\"), (3) covers hooks + routes + capabilities — three core plugin features at once, and (4) includes a migration step, which is what real systems actually need beyond Hello-World plugins.",
-									"_key": "k38s"
+									"text": "(1) starts from a visible bug (\"why isn't `",
+									"_key": "k38sa"
+								},
+								{
+									"_type": "span",
+									"text": "bold",
+									"_key": "k38sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "` bold?\"), (2) uses a plugin instead of a DB patch (the lesson on \"respect the framework's contract\"), (3) covers hooks + routes + capabilities — three core plugin features at once, and (4) includes a migration step, which is what real systems actually need beyond Hello-World plugins.",
+									"_key": "k38sc"
 								}
 							],
 							"_key": "k38"
@@ -3596,8 +5555,34 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "The plugin is copied to `student-starter/plugins-example/` so a `git clone` gives students the entire source as study material.",
-									"_key": "k39s"
+									"text": "The plugin is copied to ",
+									"_key": "k39sa"
+								},
+								{
+									"_type": "span",
+									"text": "student-starter/plugins-example/",
+									"_key": "k39sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " so a ",
+									"_key": "k39sca"
+								},
+								{
+									"_type": "span",
+									"text": "git clone",
+									"_key": "k39scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " gives students the entire source as study material.",
+									"_key": "k39scc"
 								}
 							],
 							"_key": "k39"
@@ -3620,8 +5605,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "\"Why not just patch the DB?\" boils down to one line: **write applications, not hacks**. The whole plugin took about 35 minutes from cloning EmDash source, reading the creating-plugins skill, designing, implementing, and verifying. That's 25 minutes more than a one-off SQL patch — and in exchange we get \"future EmDash upgrades won't break this\" as a permanent guarantee. For a teaching demo and for any real future adoption, those 25 minutes are obviously worth it.",
-									"_key": "k41s"
+									"text": "\"Why not just patch the DB?\" boils down to one line: ",
+									"_key": "k41sa"
+								},
+								{
+									"_type": "span",
+									"text": "write applications, not hacks",
+									"_key": "k41sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ". The whole plugin took about 35 minutes from cloning EmDash source, reading the creating-plugins skill, designing, implementing, and verifying. That's 25 minutes more than a one-off SQL patch — and in exchange we get \"future EmDash upgrades won't break this\" as a permanent guarantee. For a teaching demo and for any real future adoption, those 25 minutes are obviously worth it.",
+									"_key": "k41sc"
 								}
 							],
 							"_key": "k41"
@@ -3822,8 +5820,34 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "GitHub 上 `emdash-cms/emdash`（我們的目標）與 `generalaction/emdash`（YC W26 agentic dev tool）同名不同物，搜尋時務必認倉庫所有者。",
-									"_key": "k14s"
+									"text": "GitHub 上 ",
+									"_key": "k14sa"
+								},
+								{
+									"_type": "span",
+									"text": "emdash-cms/emdash",
+									"_key": "k14sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "（我們的目標）與 ",
+									"_key": "k14sca"
+								},
+								{
+									"_type": "span",
+									"text": "generalaction/emdash",
+									"_key": "k14scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "（YC W26 agentic dev tool）同名不同物，搜尋時務必認倉庫所有者。",
+									"_key": "k14scc"
 								}
 							],
 							"_key": "k14"
@@ -3895,8 +5919,47 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "serena 提供「IDE 級別」的 LSP 級別程式碼操作。比 grep 快、比 read 精準。重要工具：`get_symbols_overview`、`find_symbol`、`find_referencing_symbols`。",
-									"_key": "k2s"
+									"text": "serena 提供「IDE 級別」的 LSP 級別程式碼操作。比 grep 快、比 read 精準。重要工具：",
+									"_key": "k2sa"
+								},
+								{
+									"_type": "span",
+									"text": "get_symbols_overview",
+									"_key": "k2sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "、",
+									"_key": "k2sca"
+								},
+								{
+									"_type": "span",
+									"text": "find_symbol",
+									"_key": "k2scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "、",
+									"_key": "k2scca"
+								},
+								{
+									"_type": "span",
+									"text": "find_referencing_symbols",
+									"_key": "k2sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "。",
+									"_key": "k2sccc"
 								}
 							],
 							"_key": "k2"
@@ -4039,8 +6102,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "3) MCP server 預設啟用，路徑 `/_emdash/api/mcp`",
-									"_key": "k14s"
+									"text": "3) MCP server 預設啟用，路徑 ",
+									"_key": "k14sa"
+								},
+								{
+									"_type": "span",
+									"text": "/_emdash/api/mcp",
+									"_key": "k14sb",
+									"marks": [
+										"code"
+									]
 								}
 							],
 							"_key": "k14"
@@ -4160,8 +6231,11 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "`pnpm create emdash@latest my-emdash-blog --template blog --platform node --pm pnpm --install --yes`",
-									"_key": "k4s"
+									"text": "pnpm create emdash@latest my-emdash-blog --template blog --platform node --pm pnpm --install --yes",
+									"_key": "k4sb",
+									"marks": [
+										"code"
+									]
 								}
 							],
 							"_key": "k4"
@@ -4196,8 +6270,42 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "`pnpm bootstrap` = `emdash init`（migrations）+ `emdash seed`（套用 seed.json）。會建 data.db（SQLite）、下載 Unsplash 範例圖到 uploads/。",
-									"_key": "k7s"
+									"text": "pnpm bootstrap",
+									"_key": "k7sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " = ",
+									"_key": "k7sca"
+								},
+								{
+									"_type": "span",
+									"text": "emdash init",
+									"_key": "k7scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "（migrations）+ ",
+									"_key": "k7scca"
+								},
+								{
+									"_type": "span",
+									"text": "emdash seed",
+									"_key": "k7sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "（套用 seed.json）。會建 data.db（SQLite）、下載 Unsplash 範例圖到 uploads/。",
+									"_key": "k7sccc"
 								}
 							],
 							"_key": "k7"
@@ -4220,8 +6328,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "`pnpm dev` → http://localhost:4321（Astro v6.2.2 約 2.5 秒就緒）。",
-									"_key": "k9s"
+									"text": "pnpm dev",
+									"_key": "k9sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " → http://localhost:4321（Astro v6.2.2 約 2.5 秒就緒）。",
+									"_key": "k9sc"
 								}
 							],
 							"_key": "k9"
@@ -4292,8 +6408,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "啟動時會看到 `[hooks] Plugin \"audit-log\" ... missing capability — skipping`，這是 capability 守關真實運作的證據。",
-									"_key": "k15s"
+									"text": "啟動時會看到 ",
+									"_key": "k15sa"
+								},
+								{
+									"_type": "span",
+									"text": "[hooks] Plugin \"audit-log\" ... missing capability — skipping",
+									"_key": "k15sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "，這是 capability 守關真實運作的證據。",
+									"_key": "k15sc"
 								}
 							],
 							"_key": "k15"
@@ -4304,8 +6433,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "媒體檔名是 ULID（如 `01KQY00MTRSX9Q7C2NW0GMTP28.jpg`），不是 UUID — 可排序、collision-free。",
-									"_key": "k16s"
+									"text": "媒體檔名是 ULID（如 ",
+									"_key": "k16sa"
+								},
+								{
+									"_type": "span",
+									"text": "01KQY00MTRSX9Q7C2NW0GMTP28.jpg",
+									"_key": "k16sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "），不是 UUID — 可排序、collision-free。",
+									"_key": "k16sc"
 								}
 							],
 							"_key": "k16"
@@ -4521,8 +6663,34 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "On GitHub, `emdash-cms/emdash` (our target) and `generalaction/emdash` (YC W26 agentic dev tool) share a name. Always verify the repo owner.",
-									"_key": "k14s"
+									"text": "On GitHub, ",
+									"_key": "k14sa"
+								},
+								{
+									"_type": "span",
+									"text": "emdash-cms/emdash",
+									"_key": "k14sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " (our target) and ",
+									"_key": "k14sca"
+								},
+								{
+									"_type": "span",
+									"text": "generalaction/emdash",
+									"_key": "k14scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " (YC W26 agentic dev tool) share a name. Always verify the repo owner.",
+									"_key": "k14scc"
 								}
 							],
 							"_key": "k14"
@@ -4594,8 +6762,47 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "serena provides IDE-grade (LSP-level) code operations. Faster than grep, more precise than read. Key tools: `get_symbols_overview`, `find_symbol`, `find_referencing_symbols`.",
-									"_key": "k2s"
+									"text": "serena provides IDE-grade (LSP-level) code operations. Faster than grep, more precise than read. Key tools: ",
+									"_key": "k2sa"
+								},
+								{
+									"_type": "span",
+									"text": "get_symbols_overview",
+									"_key": "k2sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ", ",
+									"_key": "k2sca"
+								},
+								{
+									"_type": "span",
+									"text": "find_symbol",
+									"_key": "k2scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ", ",
+									"_key": "k2scca"
+								},
+								{
+									"_type": "span",
+									"text": "find_referencing_symbols",
+									"_key": "k2sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ".",
+									"_key": "k2sccc"
 								}
 							],
 							"_key": "k2"
@@ -4738,8 +6945,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "3) MCP server is enabled by default at `/_emdash/api/mcp`",
-									"_key": "k14s"
+									"text": "3) MCP server is enabled by default at ",
+									"_key": "k14sa"
+								},
+								{
+									"_type": "span",
+									"text": "/_emdash/api/mcp",
+									"_key": "k14sb",
+									"marks": [
+										"code"
+									]
 								}
 							],
 							"_key": "k14"
@@ -4859,8 +7074,11 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "`pnpm create emdash@latest my-emdash-blog --template blog --platform node --pm pnpm --install --yes`",
-									"_key": "k4s"
+									"text": "pnpm create emdash@latest my-emdash-blog --template blog --platform node --pm pnpm --install --yes",
+									"_key": "k4sb",
+									"marks": [
+										"code"
+									]
 								}
 							],
 							"_key": "k4"
@@ -4895,8 +7113,42 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "`pnpm bootstrap` = `emdash init` (migrations) + `emdash seed` (apply seed.json). Builds data.db, downloads Unsplash sample images to uploads/.",
-									"_key": "k7s"
+									"text": "pnpm bootstrap",
+									"_key": "k7sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " = ",
+									"_key": "k7sca"
+								},
+								{
+									"_type": "span",
+									"text": "emdash init",
+									"_key": "k7scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " (migrations) + ",
+									"_key": "k7scca"
+								},
+								{
+									"_type": "span",
+									"text": "emdash seed",
+									"_key": "k7sccb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " (apply seed.json). Builds data.db, downloads Unsplash sample images to uploads/.",
+									"_key": "k7sccc"
 								}
 							],
 							"_key": "k7"
@@ -4919,8 +7171,16 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "`pnpm dev` → http://localhost:4321 (Astro v6.2.2, ready in ~2.5s).",
-									"_key": "k9s"
+									"text": "pnpm dev",
+									"_key": "k9sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " → http://localhost:4321 (Astro v6.2.2, ready in ~2.5s).",
+									"_key": "k9sc"
 								}
 							],
 							"_key": "k9"
@@ -4991,8 +7251,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Boot logs include `[hooks] Plugin \"audit-log\" ... missing capability — skipping` — concrete proof of the capability gate at runtime.",
-									"_key": "k15s"
+									"text": "Boot logs include ",
+									"_key": "k15sa"
+								},
+								{
+									"_type": "span",
+									"text": "[hooks] Plugin \"audit-log\" ... missing capability — skipping",
+									"_key": "k15sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " — concrete proof of the capability gate at runtime.",
+									"_key": "k15sc"
 								}
 							],
 							"_key": "k15"
@@ -5003,8 +7276,21 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Media files are named with ULIDs (e.g. `01KQY00MTRSX9Q7C2NW0GMTP28.jpg`), not UUIDs — sortable, collision-free.",
-									"_key": "k16s"
+									"text": "Media files are named with ULIDs (e.g. ",
+									"_key": "k16sa"
+								},
+								{
+									"_type": "span",
+									"text": "01KQY00MTRSX9Q7C2NW0GMTP28.jpg",
+									"_key": "k16sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "), not UUIDs — sortable, collision-free.",
+									"_key": "k16sc"
 								}
 							],
 							"_key": "k16"
