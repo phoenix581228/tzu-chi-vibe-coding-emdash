@@ -1,0 +1,5041 @@
+{
+	"$schema": "https://emdashcms.com/seed.schema.json",
+	"version": "1",
+	"meta": {
+		"name": "Blog Starter",
+		"description": "A blog with posts and pages",
+		"author": "EmDash"
+	},
+	"settings": {
+		"title": "My Blog",
+		"tagline": "Thoughts on building for the web"
+	},
+	"collections": [
+		{
+			"slug": "posts",
+			"label": "Posts",
+			"labelSingular": "Post",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search",
+				"seo"
+			],
+			"commentsEnabled": true,
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Title",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "featured_image",
+					"label": "Featured Image",
+					"type": "image"
+				},
+				{
+					"slug": "lang",
+					"label": "Language (zh / en)",
+					"type": "string",
+					"required": true
+				},
+				{
+					"slug": "topic",
+					"label": "Topic key",
+					"type": "string"
+				},
+				{
+					"slug": "excerpt",
+					"label": "Excerpt",
+					"type": "text",
+					"searchable": true
+				},
+				{
+					"slug": "content",
+					"label": "Content",
+					"type": "portableText",
+					"searchable": true
+				}
+			]
+		},
+		{
+			"slug": "pages",
+			"label": "Pages",
+			"labelSingular": "Page",
+			"supports": [
+				"drafts",
+				"revisions",
+				"search"
+			],
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Title",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "lang",
+					"label": "Language (zh / en)",
+					"type": "string",
+					"required": true
+				},
+				{
+					"slug": "topic",
+					"label": "Topic key",
+					"type": "string"
+				},
+				{
+					"slug": "content",
+					"label": "Content",
+					"type": "portableText",
+					"searchable": true
+				}
+			]
+		},
+		{
+			"slug": "lessons",
+			"label": "Lessons",
+			"labelSingular": "Lesson",
+			"supports": [
+				"drafts",
+				"search",
+				"seo"
+			],
+			"fields": [
+				{
+					"slug": "title",
+					"label": "Title",
+					"type": "string",
+					"required": true,
+					"searchable": true
+				},
+				{
+					"slug": "lang",
+					"label": "Language (zh / en)",
+					"type": "string",
+					"required": true
+				},
+				{
+					"slug": "phase",
+					"label": "Phase number",
+					"type": "string"
+				},
+				{
+					"slug": "summary",
+					"label": "Summary",
+					"type": "text",
+					"searchable": true
+				},
+				{
+					"slug": "content",
+					"label": "Content",
+					"type": "portableText",
+					"searchable": true
+				}
+			]
+		}
+	],
+	"taxonomies": [
+		{
+			"name": "category",
+			"label": "Categories",
+			"labelSingular": "Category",
+			"hierarchical": true,
+			"collections": [
+				"posts"
+			],
+			"terms": [
+				{
+					"slug": "development",
+					"label": "Development"
+				},
+				{
+					"slug": "design",
+					"label": "Design"
+				},
+				{
+					"slug": "notes",
+					"label": "Notes"
+				}
+			]
+		},
+		{
+			"name": "tag",
+			"label": "Tags",
+			"labelSingular": "Tag",
+			"hierarchical": false,
+			"collections": [
+				"posts"
+			],
+			"terms": [
+				{
+					"slug": "webdev",
+					"label": "Web Development"
+				},
+				{
+					"slug": "opinion",
+					"label": "Opinion"
+				},
+				{
+					"slug": "tools",
+					"label": "Tools"
+				},
+				{
+					"slug": "creativity",
+					"label": "Creativity"
+				}
+			]
+		}
+	],
+	"bylines": [
+		{
+			"id": "byline-editorial",
+			"slug": "emdash-editorial",
+			"displayName": "EmDash Editorial"
+		},
+		{
+			"id": "byline-guest",
+			"slug": "guest-contributor",
+			"displayName": "Guest Contributor",
+			"isGuest": true
+		}
+	],
+	"menus": [
+		{
+			"name": "primary",
+			"label": "Primary Navigation",
+			"items": [
+				{
+					"type": "custom",
+					"label": "Home",
+					"url": "/"
+				},
+				{
+					"type": "custom",
+					"label": "About",
+					"url": "/pages/about-zh"
+				},
+				{
+					"type": "custom",
+					"label": "Posts",
+					"url": "/posts"
+				},
+				{
+					"type": "custom",
+					"label": "Lessons",
+					"url": "/lessons"
+				}
+			]
+		}
+	],
+	"widgetAreas": [
+		{
+			"name": "sidebar",
+			"label": "Sidebar",
+			"description": "Widget area displayed on single post pages",
+			"widgets": [
+				{
+					"type": "component",
+					"componentId": "core:search",
+					"title": "Search"
+				},
+				{
+					"type": "component",
+					"componentId": "core:categories",
+					"title": "Categories"
+				},
+				{
+					"type": "component",
+					"componentId": "core:tags",
+					"title": "Tags"
+				},
+				{
+					"type": "component",
+					"componentId": "core:recent-posts",
+					"title": "Recent Posts",
+					"settings": {
+						"count": 5,
+						"showDate": true
+					}
+				},
+				{
+					"type": "component",
+					"componentId": "core:archives",
+					"title": "Archives",
+					"settings": {
+						"type": "monthly",
+						"limit": 6
+					}
+				}
+			]
+		},
+		{
+			"name": "footer",
+			"label": "Footer",
+			"description": "Widget area displayed in the site footer",
+			"widgets": [
+				{
+					"type": "content",
+					"title": "About",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "A blog about software, design, and the occasional stray thought.",
+									"_key": "k1"
+								}
+							],
+							"_key": "k0"
+						}
+					]
+				}
+			]
+		}
+	],
+	"sections": [
+		{
+			"slug": "newsletter-signup",
+			"title": "Newsletter Signup",
+			"description": "A call-to-action block for newsletter subscriptions",
+			"keywords": [
+				"newsletter",
+				"subscribe",
+				"email",
+				"cta"
+			],
+			"source": "theme",
+			"content": [
+				{
+					"_type": "block",
+					"style": "h3",
+					"children": [
+						{
+							"_type": "span",
+							"text": "Stay in the loop",
+							"_key": "k1"
+						}
+					],
+					"_key": "k0"
+				},
+				{
+					"_type": "block",
+					"style": "normal",
+					"children": [
+						{
+							"_type": "span",
+							"text": "Get notified when new posts are published. No spam, unsubscribe anytime.",
+							"_key": "k3"
+						}
+					],
+					"_key": "k2"
+				}
+			]
+		},
+		{
+			"slug": "about-author",
+			"title": "About the Author",
+			"description": "Brief author bio for use in posts or pages",
+			"keywords": [
+				"author",
+				"bio",
+				"about"
+			],
+			"source": "theme",
+			"content": [
+				{
+					"_type": "block",
+					"style": "normal",
+					"children": [
+						{
+							"_type": "span",
+							"text": "A software developer who writes about building things on the web. Based somewhere with good coffee and reliable internet.",
+							"_key": "k1"
+						}
+					],
+					"_key": "k0"
+				}
+			]
+		}
+	],
+	"content": {
+		"pages": [
+			{
+				"id": "about-zh",
+				"slug": "about-zh",
+				"status": "published",
+				"data": {
+					"title": "關於本站",
+					"lang": "zh",
+					"topic": "about",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "本站是課程產物",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "本網站是 **慈濟大學 資訊科技與管理學系 大四 Vibe Coding 實機課程** 的教學產物。",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "我們以 Cloudflare 於 2026 年 4 月 1 日發布的開源 CMS — EmDash — 作為教學範本，由師生在課堂上協同 Claude Code AI agent 完成研究、深度分析、本機部署、雙語 i18n 等實作，最終把結果直接 dogfood 到這個 EmDash 站本身。",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "你現在看到的每一個頁面、每一張代表圖、每一個雙語切換，都是這 2 小時實機課程的真實產出。",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "課程目的",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Vibe Coding 不是「讓 AI 替你寫」，而是「讓 AI 跟你一起寫」。本課程的核心目標是訓練學員具備以下三項能力：",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**1. 下對指令的能力。** 不要說「寫一個部落格」；要說「在 EmDash 加一個 recipes collection，欄位是 name、photo、ingredients、steps」。具體、可驗收的需求才能換到精準的程式碼。",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**2. 善用 skill 的能力。** Claude Code 載入領域 skill 後遠比 Google 精準。本課程示範如何把研究方法（technical-research）、程式碼分析（code-deep-analysis）、敏捷開發（agile-development）等抽象方法論，封裝成可被 AI 重用的 skill。",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**3. 驗證 AI 結論的能力。** 我們在課堂上抓到三項公開文檔的錯誤（編輯器是 TipTap 不是 TinyMCE、Plugin sandbox 用 Worker Loader 不是 Workers for Platforms、MCP server 預設啟用），這些都是實際 git clone 原始碼比對才能發現的。盲信 AI 等於放棄工程責任。",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "教學範式：dogfooding",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "本站本身即是教材。在這個 EmDash 站上，學員看到的每一篇研究文章（／文章 區塊）、每一堂課程概要（／課程 區塊）、每一張 AI 生成的代表圖、每一個語言切換按鈕，都是課堂示範的具體產出，而非另外準備的「教學投影片」。",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "這呼應了 EmDash 自身的設計哲學：把 AI agent 視為第一級使用者。EmDash monorepo 內建 7 個 Claude Code skills、預設啟用的 MCP Server、為 LLM 設計的 agent-browser CLI — 這些都不是事後想到的功能，而是從設計起點就把 LLM 納入。我們的課程也採同樣立場：學員不是在「學一個給人用的工具」，而是在「學如何與 AI 共同操作工具」。",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "課程交付物",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "本課程在 2 小時內，產出以下完整一套教學資產：",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**A. 教學 skill — `tzu-chi-vibe-coding-emdash`**：六階段流程（環境準備、技術研究、程式碼深度分析、本機 EmDash 安裝、第一個自訂 collection、Plugin 或 Cloudflare 部署）封裝成 Claude Code 可載入的 skill，學員回家後對 Claude Code 說「請載入 tzu-chi-vibe-coding-emdash skill 開始第 1 階段」即可重現整段流程。",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**B. EmDash blog 自呈現教學內容**：本站 `/posts` 與 `/lessons` 收錄 3 份研究報告（中英共 6 篇文章）與 6 篇課程概要，並具備全站 zh / en 雙語切換、跨語言對等版本自動 redirect、cookie 持久化（一年）。",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**C. 學員 starter 倉庫**：`student-starter/` 含 README（雙語）、quickstart.sh 環境檢查腳本、3 份完整研究報告、6 道循序練習題（雙語）、8 個 Claude Code skills（7 EmDash 內建 + 1 教學）。學員 git clone 後可獨立進行回家學習。",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "技術棧（本站）",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "本站採用：Astro 6.2 / EmDash 0.9 / TypeScript / SQLite (本機檔)/ React 19（Admin UI）/ Portable Text（內容）/ TipTap（富文字編輯器）/ pnpm 10.28 / Node 22+。完整深度分析請見 `/posts/research-code-zh`。",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "致謝與授權",
+									"_key": "k19s"
+								}
+							],
+							"_key": "k19"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "感謝 Cloudflare 開放 EmDash 原始碼供教學使用，授權 MIT。本教學素材同樣以 MIT 授權開放，歡迎其他教育機構自由使用、修改、再發行。",
+									"_key": "k20s"
+								}
+							],
+							"_key": "k20"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "若你想將本站當作模板開設類似課程，所有源碼與 skill 都可在 student-starter 倉庫取得；歡迎透過 issue 或 PR 回饋改進。",
+									"_key": "k21s"
+								}
+							],
+							"_key": "k21"
+						}
+					]
+				}
+			},
+			{
+				"id": "about-en",
+				"slug": "about-en",
+				"status": "published",
+				"data": {
+					"title": "About This Site",
+					"lang": "en",
+					"topic": "about",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "This site is a course artefact",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "This website is the teaching artefact of the **Tzu Chi University, Department of Information Technology & Management — Senior Vibe Coding Lab**.",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "We chose Cloudflare's open-source CMS — EmDash, released on 2026-04-01 — as our teaching subject. In class, students worked alongside the Claude Code AI agent to complete technical research, deep code analysis, local deployment, and bilingual i18n — and the results were dogfooded back into the very EmDash site you are reading right now.",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Every page, every cover image, every language toggle you see was produced live during a 2-hour hands-on session.",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Course goals",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Vibe Coding is not \"let the AI write for you\" — it is \"writing with the AI.\" The course trains three abilities:",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**1. Writing the right prompt.** Don't say \"build a blog.\" Say \"add a `recipes` collection to EmDash with fields name, photo, ingredients, steps.\" Concrete, testable specs translate to precise code.",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**2. Using skills well.** Claude Code with a domain skill loaded is far more precise than Google. The course shows how research methodology (technical-research), code analysis (code-deep-analysis), and agile development can be packaged as skills the AI re-uses.",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**3. Verifying AI claims.** During class we caught three errors in public documentation: the editor is TipTap, not TinyMCE; the plugin sandbox uses Worker Loader, not Workers for Platforms; the MCP server is enabled by default. None of these are visible without `git clone` and reading source. Blindly trusting the AI is abdicating engineering responsibility.",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Teaching paradigm: dogfooding",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The site itself is the teaching material. Every research article in /posts, every lesson summary in /lessons, every AI-generated cover image, every language toggle here is a live class output — not pre-prepared slides on the side.",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "This mirrors EmDash's own design philosophy: treat the AI agent as a first-class user. The EmDash monorepo ships 7 built-in Claude Code skills, an MCP Server enabled by default, and an agent-browser CLI designed for LLMs — none of which are afterthoughts. Our course adopts the same stance: students are not \"learning a human tool\" but \"learning to operate tools alongside the AI.\"",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Deliverables",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Within 2 hours the course produces a complete teaching package:",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**A. Teaching skill — `tzu-chi-vibe-coding-emdash`**: six phases (environment, technical research, code deep analysis, local EmDash install, first custom collection, plugin or Cloudflare deploy) packaged as a loadable Claude Code skill. At home, a student tells Claude Code \"please load the tzu-chi-vibe-coding-emdash skill and start phase 1\" to replay the entire flow.",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**B. The EmDash site as the teaching surface**: this site's /posts and /lessons hold 3 research reports (6 bilingual articles) and 6 lesson summaries, with site-wide zh / en switching, cross-language equivalent-version redirect, and a one-year cookie.",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**C. Student starter repository**: `student-starter/` ships a bilingual README, a `quickstart.sh` environment check, the 3 full research reports, 6 sequential bilingual exercises, and 8 Claude Code skills (7 built-in + 1 course skill). Students `git clone` and continue at home.",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Tech stack (this site)",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Astro 6.2 / EmDash 0.9 / TypeScript / SQLite (local file) / React 19 (Admin UI) / Portable Text / TipTap (rich-text editor) / pnpm 10.28 / Node 22+. See `/posts/research-code-en` for the full deep analysis.",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Credits & licence",
+									"_key": "k19s"
+								}
+							],
+							"_key": "k19"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Thanks to Cloudflare for releasing EmDash under MIT for teaching purposes. This teaching material is also released under MIT — other institutions are free to use, modify, and redistribute.",
+									"_key": "k20s"
+								}
+							],
+							"_key": "k20"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "If you want to fork this site as a template for a similar course, the source and skill are in the student-starter repository. Issues and PRs welcome.",
+									"_key": "k21s"
+								}
+							],
+							"_key": "k21"
+						}
+					]
+				}
+			}
+		],
+		"posts": [
+			{
+				"id": "research-tech-zh",
+				"slug": "research-tech-zh",
+				"status": "published",
+				"data": {
+					"title": "Cloudflare EmDash 技術研究報告",
+					"lang": "zh",
+					"topic": "tech-research",
+					"excerpt": "Cloudflare 2026 年 4 月 1 日發布的開源 CMS，TypeScript + Astro + Workers 全棧、AI agent 為第一級使用者。本文是研究團隊以 7 步驟流程完成的技術研究結論摘要。",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Cloudflare EmDash 技術研究報告",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "研究流程",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "本研究依據「technical-research」7 步驟流程進行：書記查記憶 → 文書官 + 收集師補資料 → 書記寫技術文件 → 依文件分析 → 三角論證投票 → 撰寫研究報告 → 書記記錄摘要。三方獨立分析後 3:0 一致通過建議進行 POC。",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash 是什麼",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash 是 Cloudflare 於 2026/4/1 開源的 CMS，自我定位「WordPress 精神繼承者」。版本 v0.1.0 早期 preview，1.0 release 預計 2026/5–6 月。授權 MIT，倉庫 emdash-cms/emdash（10.3k stars）。",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "技術棧：TypeScript + Astro 6.0（output: server）+ Cloudflare Workers / Node.js standalone；Kysely 抽象 SQL 支援 D1 / SQLite / Turso / PostgreSQL；Storage 抽象 R2 / S3 / 本機檔案系統；認證 Passkey-first（WebAuthn）+ RBAC + SSO；內容 Portable Text（JSON）；Plugin sandbox 透過 Cloudflare Worker Loader 達成 V8 isolate 隔離；AI 原生：內建 MCP Server + Agent Skills + EmDash CLI。",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "6 種應用範式",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1. Headless / Hybrid CMS（Astro 一個專案同時跑 SSR 前端 + Admin SPA + REST API）",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2. AI-Agent 原生站台（每個實例自帶 MCP Server 讓 agent 直接 CRUD）",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3. x402 付費內容（HTTP 402 Payment Required，agent 對 publisher 微支付）",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "4. 多租戶 SaaS / 託管平台（Workers for Platforms 跑百萬實例 scale-to-zero）",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "5. WordPress 替代（WXR 匯入 + 主題安全模型升級）",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "6. 結構化內容發布（Portable Text 取代 Gutenberg blocks）",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "8 大開發範式",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Database-first schema（欄位定義存 _emdash_fields 表，動態建欄）；Live Content Collections（getEmDashCollection 即時讀寫，無需 rebuild）；Type-safe everywhere（Kysely 全鏈路型別 + npx emdash types 自動生 TS）；Capability-based plugin（manifest 宣告 capability 類 OAuth scopes）；Storage abstraction（同 config 切 sqlite/d1/turso/postgres）；Astro-as-frontend（Theme 純 Astro project，禁止存 DB）；Signed URL uploads（避開 Workers 25 MB body limit）；路由注入（/_emdash/admin SPA + /_emdash/api/* REST，由 emdash 套件 inject）。",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "POC 三階段建議",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "階段 1（1–2 天）本機 SQLite 跑通；階段 2（2–3 天）部署 Cloudflare Workers + 啟用 MCP Server + AI agent CRUD；階段 3（3–5 天）寫 sandboxed plugin + x402 endpoint。",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "主要風險",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "v0.1.0 不穩、零生態（無 plugin/theme marketplace）、SQLite/D1 上限、Cloudflare 鎖定、Plugin sandbox 僅 Cloudflare 有效（Node.js 無）、Dynamic Workers 需 Workers Paid（$5/月起）。",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "命名衝突警告",
+									"_key": "k19s"
+								}
+							],
+							"_key": "k19"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "GitHub 上 emdash-cms/emdash（本研究目標）與 generalaction/emdash（YC W26 agentic dev tool）同名不同物，搜尋時務必認倉庫所有者。",
+									"_key": "k20s"
+								}
+							],
+							"_key": "k20"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "結論",
+									"_key": "k21s"
+								}
+							],
+							"_key": "k21"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "三方投票 3:0 一致通過進行 POC，但範圍嚴格限定為「研究範式」而非正式採用。即使 EmDash 本身演進失敗，其架構範式（database-first schema、capability-based plugins、MCP-as-admin）對團隊未來自建系統長期有價值。",
+									"_key": "k22s"
+								}
+							],
+							"_key": "k22"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "完整報告檔位於 student-starter/lecture-notes/01-technical-research-report.md，內含 7 步驟詳細紀錄、引用來源與報告流程合規性附錄。",
+									"_key": "k23s"
+								}
+							],
+							"_key": "k23"
+						}
+					],
+					"featured_image": {
+						"id": "01KQY6923HQZ1R20E2SYG4823J",
+						"src": "/_emdash/api/media/file/01KQY691VD4KJ31816J9E733ZP.png",
+						"alt": "Cloudflare EmDash 技術研究報告",
+						"width": 2752,
+						"height": 1536
+					}
+				}
+			},
+			{
+				"id": "research-code-zh",
+				"slug": "research-code-zh",
+				"status": "published",
+				"data": {
+					"title": "EmDash 程式碼深度分析",
+					"lang": "zh",
+					"topic": "code-analysis",
+					"excerpt": "用 serena MCP 與 5 phase 框架掃描 EmDash 整個 monorepo，揭露 12 個 packages、156 個路由、23 個 plugin hooks。修正公開文檔三項錯誤。",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash 程式碼深度分析",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "倉庫真相",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "git clone 後實測：51 MB（不含 node_modules），commit b3d1f40。包含 12 個 packages（不只官方文檔說的 6 個）：core (emdash 0.9.0)、admin、auth、auth-atproto、blocks、cloudflare、plugins、create-emdash、contentful-to-portable-text、gutenberg-to-portable-text、marketplace、x402。再加 10 個 templates（含 5 個 Cloudflare 變體）、6 個 demos、7 個內建 Claude Code Skills。",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "core/src 共 33 個子目錄，156 個 Astro 路由由 emdash 套件透過 injectRoute 注入。Plugin Manager 31 個方法 555 LOC。MCP server 在單一函數 createMcpServer 中佔 1841 行（packages/core/src/mcp/server.ts:387-2228）。",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "修正公開文檔三項錯誤",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1. 編輯器是 TipTap，不是部分獨立評論宣稱的 TinyMCE。",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2. Plugin sandbox 採 Cloudflare Worker Loader（一個較新的 binding），不是 Workers for Platforms / Dynamic Workers。wrangler.jsonc 需含 worker_loaders: [{ binding: \"LOADER\" }]。",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3. MCP server 預設啟用（mcp: true），路徑 /_emdash/api/mcp，需 Bearer token 認證。",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Plugin 系統雙軌設計",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "兩種 format：native（React + adminEntry + Portable Text 區塊，只能 trusted）、standard（Block Kit 無 React，可 sandboxed）。Sandboxed 列表強制 format=standard，否則 throw。",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "23 個 hooks（公開只列 6 個）：plugin lifecycle 4 個、content 6 個、media 2 個、cron 1 個、email 3 個、comment 4 個、page 2 個、custom 1 個。",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Capability 命名重構中：current 11 個（network:request、content:read 等）+ deprecated 11 個 alias（read:content 等仍接受）。",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Sandbox 執行細節",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Binding：LOADER（Cloudflare Worker Loader）。部署期 packages/cloudflare/src/sandbox/wrapper.ts 產生 wrapper JS，將 plugin manifest 元資料嵌於註解。執行期 host worker 透過 LOADER binding 載入 isolate；context（KV/storage/email/users）以 RPC 經 BRIDGE service binding 回呼到 host。結果：trusted 與 sandboxed 用相同 callback signature，但 sandboxed 副作用必經 host 守關。",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "6 層 Middleware 鏈",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "皆 order: pre — playground（如 playground 模式）→ emdash/middleware（runtime init: DB + manifest）→ emdash/middleware/redirect → emdash/middleware/setup → emdash/middleware/auth → emdash/middleware/request-context（ALS：edit mode、preview）。",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "重要設計選擇",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Astro 內建 checkOrigin 被刻意關閉，由 EmDash 自家 checkPublicCsrf 以 dual-origin 接管，支援反向代理 / Docker 部署。D1 session: \"auto\" 用 cookie 中的 SQLite bookmark 做 read-your-writes consistency，不靠中央化 primary。媒體檔名是 ULID（如 01KQY00MTRSX9Q7C2NW0GMTP28.jpg），不是 UUID — 可排序、collision-free。",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "結論",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash 程式碼比公開文檔複雜得多，但架構自洽。對於想學「serverless multi-tenant CMS」與「AI-agent 原生」這兩個合流範式的團隊，原始碼本身是最佳教材。",
+									"_key": "k19s"
+								}
+							],
+							"_key": "k19"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "完整報告檔位於 student-starter/lecture-notes/02-code-deep-analysis.md，內含 4 張 Mermaid 圖（系統架構、請求生命週期、Plugin 系統、資料流）與技術棧詳表。",
+									"_key": "k20s"
+								}
+							],
+							"_key": "k20"
+						}
+					],
+					"featured_image": {
+						"id": "01KQY69J3CJAEAVNF2A84GADJF",
+						"src": "/_emdash/api/media/file/01KQY69HWTKK67EMPDBYN3NMMC.png",
+						"alt": "EmDash 程式碼深度分析",
+						"width": 2752,
+						"height": 1536
+					}
+				}
+			},
+			{
+				"id": "research-skills-zh",
+				"slug": "research-skills-zh",
+				"status": "published",
+				"data": {
+					"title": "EmDash 內建 7 個 Claude Code Skills 研究",
+					"lang": "zh",
+					"topic": "builtin-skills",
+					"excerpt": "EmDash 把 7 個 Claude Code skills 直接打包進 monorepo（1491 行 + 24 附件），證實 AI agent 是 EmDash 的第一級使用者，不只是內建 MCP server。",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash 內建 7 個 Claude Code Skills 研究",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "三類分組",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "建置類（在 EmDash 上工作）：building-emdash-site、creating-plugins、emdash-cli。",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "遷移類（從 WordPress 換過來）：wordpress-plugin-to-emdash、wordpress-theme-to-emdash。",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "品質保障類（通用，不限 EmDash）：adversarial-reviewer、agent-browser。",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "各 skill 概要",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "building-emdash-site（146 行 + 4 references）— 5 條救命 gotchas：image 是 object 不是 string；entry.id 是 slug、entry.data.id 是 ULID；taxonomy 名要對齊 seed；必呼叫 Astro.cache.set(cacheHint)；禁用 getStaticPaths。",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "creating-plugins（459 行 + 7 references，最大 skill）— 揭露雙 entrypoint 必拆：index.ts（build-time，Vite，side-effect-free）+ sandbox-entry.ts（runtime，跑在 deploy server）。Standard format vs Native format 二維矩陣。",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "emdash-cli（245 行 + EDITING-FLOW.md）— 內建 Cloudflare Access service token 支援，--header / EMDASH_HEADERS 直接送，預期 CI / agent 自動化操作遠端站是常態。",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "wordpress-plugin-to-emdash（297 行）— WP API 對應到 EmDash API 的完整對應表。哲學：clean-room，不要 line-by-line port。",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "wordpress-theme-to-emdash（83 行 + 6 phases + 5 references + scaffold = 11 附件，規格化最完整）— 6 階段流程 discovery → design → templates → dynamic → seed → verify。含 scaffold/{package.json, CHECKLIST.md, src/} 整包可複製。",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "adversarial-reviewer（122 行）— 敵意式 code review。心態：guilty until proven innocent；no compliments；no hedging；prove it。規則：silence means approval（不提就放行，省 token）。",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "agent-browser（139 行）— agent-browser CLI（非 Playwright），用 accessibility tree + @e1/@e2 ref，不需理解 selector。",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "設計觀察",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "skills 互相 dispatch，避免重複內容（如 wordpress-plugin-to-emdash 明確說「找 creating-plugins skill 看實作」）。agent-browser 自製不用 Playwright = 給 LLM 設計的最小介面。adversarial-reviewer「沉默就是放行」= LLM token 友善設計。emdash-cli 內建 service token = 預期 CI / agent 操作遠端站。",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "結論",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash 的「AI-native」不只是內建 MCP server，更是完整的 AI 開發工具鏈。每個 skill 都假設 LLM 是執行者，而非人類的助手。這個觀察改變了對 EmDash 的根本理解：它不是「能用 AI 操作的 CMS」，而是「為 AI 設計的 CMS」。",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "對教學的影響：本課程建議學員把這 7 個 skills 加進 .claude/skills 目錄，使 Claude Code 立即擁有 EmDash 領域知識。完整報告檔位於 student-starter/lecture-notes/03-builtin-skills-research.md。",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						}
+					],
+					"featured_image": {
+						"id": "01KQY69JPCPM4P2GWKTVFGX82M",
+						"src": "/_emdash/api/media/file/01KQY69JG25QEY6211NQZ5NSBT.png",
+						"alt": "EmDash 內建 7 個 Claude Code Skills",
+						"width": 2752,
+						"height": 1536
+					}
+				}
+			},
+			{
+				"id": "research-tech-en",
+				"slug": "research-tech-en",
+				"status": "published",
+				"data": {
+					"title": "Cloudflare EmDash Technical Research Report",
+					"lang": "en",
+					"topic": "tech-research",
+					"excerpt": "Cloudflare's open-source CMS released April 1, 2026 — TypeScript + Astro + Workers full-stack, with AI agent as first-class user. This is the executive summary of our 7-step research workflow.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Cloudflare EmDash Technical Research Report",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Research workflow",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "We applied the technical-research skill's 7-step workflow: librarian checks memory → document officer + collector gather data → librarian writes the tech document → analysis → triangulation vote → write report → librarian records the summary. Three independent voters (Coordinator / Collector / Analyst) reached 3:0 consensus to proceed with the POC.",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "What is EmDash?",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash is an open-source CMS released by Cloudflare on 2026-04-01, positioning itself as the \"spiritual successor to WordPress.\" Currently v0.1.0 (developer preview); 1.0 release expected May–June 2026. MIT-licensed, repository emdash-cms/emdash (10.3k stars).",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Tech stack: TypeScript + Astro 6.0 (output: server) + Cloudflare Workers / Node.js standalone; Kysely SQL abstraction supporting D1 / SQLite / Turso / PostgreSQL; Storage abstraction over R2 / S3 / local filesystem; Authentication is passkey-first (WebAuthn) with RBAC and SSO; Content stored as Portable Text (JSON); Plugin sandbox via Cloudflare Worker Loader (V8 isolates); AI-native via built-in MCP Server, Agent Skills, and the EmDash CLI.",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "6 application paradigms",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1. Headless / Hybrid CMS (one Astro project serves SSR frontend + Admin SPA + REST API)",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2. AI-agent native sites (each instance ships an MCP Server so agents can CRUD directly)",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3. x402 paid content (HTTP 402 Payment Required for agent-to-publisher micropayments)",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "4. Multi-tenant SaaS / hosting (Workers for Platforms scales millions of instances to zero)",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "5. WordPress replacement (WXR import + safer theme model)",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "6. Structured-content publishing (Portable Text replacing Gutenberg blocks)",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "8 development paradigms",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Database-first schema (fields stored in _emdash_fields, columns added dynamically); Live Content Collections (getEmDashCollection reads/writes live, no rebuild required); Type-safe everywhere (Kysely + npx emdash types regenerates TS types); Capability-based plugins (manifest declares capabilities like OAuth scopes); Storage abstraction (one config swaps sqlite/d1/turso/postgres); Astro-as-frontend (themes are pure Astro projects with no DB access); Signed-URL uploads (bypassing the Workers 25 MB body limit); Route injection (/_emdash/admin SPA + /_emdash/api/* REST, injected by the emdash package).",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Recommended POC stages",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Stage 1 (1–2 days) get it running locally on SQLite; Stage 2 (2–3 days) deploy to Cloudflare Workers, enable the MCP Server, drive content via an AI agent; Stage 3 (3–5 days) write a sandboxed plugin and try an x402 endpoint.",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Primary risks",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "v0.1.0 is unstable; the ecosystem is empty (no plugin / theme marketplace); SQLite/D1 ceiling for complex relational data; Cloudflare lock-in; Plugin sandbox only works on Cloudflare (Node.js deploys have no sandbox); Dynamic Workers requires Workers Paid ($5/month minimum).",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Naming-collision warning",
+									"_key": "k19s"
+								}
+							],
+							"_key": "k19"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Two GitHub projects share the name emdash: emdash-cms/emdash (this research's target) and generalaction/emdash (a YC W26 agentic-dev tool). Always check the repo owner.",
+									"_key": "k20s"
+								}
+							],
+							"_key": "k20"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Conclusion",
+									"_key": "k21s"
+								}
+							],
+							"_key": "k21"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Triangulation vote was 3:0 in favour of running the POC, but strictly framed as \"researching the paradigm\" rather than \"adopting in production.\" Even if EmDash itself fails to mature, its architectural patterns (database-first schema, capability-based plugins, MCP-as-admin) carry long-term value for any team building similar systems.",
+									"_key": "k22s"
+								}
+							],
+							"_key": "k22"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The full report is in student-starter/lecture-notes/01-technical-research-report.md, including the 7-step records, citations, and a workflow-compliance appendix.",
+									"_key": "k23s"
+								}
+							],
+							"_key": "k23"
+						}
+					],
+					"featured_image": {
+						"id": "01KQY6923HQZ1R20E2SYG4823J",
+						"src": "/_emdash/api/media/file/01KQY691VD4KJ31816J9E733ZP.png",
+						"alt": "Cloudflare EmDash 技術研究報告",
+						"width": 2752,
+						"height": 1536
+					}
+				}
+			},
+			{
+				"id": "research-code-en",
+				"slug": "research-code-en",
+				"status": "published",
+				"data": {
+					"title": "EmDash Code Deep Analysis",
+					"lang": "en",
+					"topic": "code-analysis",
+					"excerpt": "Using serena MCP and a 5-phase framework, we scanned the entire EmDash monorepo: 12 packages, 156 routes, 23 plugin hooks. Three corrections to the public docs.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash Code Deep Analysis",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "What the repo really contains",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "After git clone (51 MB excluding node_modules, commit b3d1f40): 12 packages (not the 6 the official docs imply): core (emdash 0.9.0), admin, auth, auth-atproto, blocks, cloudflare, plugins, create-emdash, contentful-to-portable-text, gutenberg-to-portable-text, marketplace, x402. Plus 10 templates (5 Cloudflare variants), 6 demos, and 7 built-in Claude Code skills.",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "core/src has 33 sub-directories. 156 Astro routes are injected by the emdash package via injectRoute. PluginManager has 31 methods totalling 555 LOC. The MCP server is implemented as a single function createMcpServer at packages/core/src/mcp/server.ts:387-2228 — 1841 lines in one function.",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Three corrections to public docs",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1. The editor is TipTap, not TinyMCE as some independent reviews claimed.",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2. The plugin sandbox uses Cloudflare Worker Loader (a newer binding), not Workers for Platforms or Dynamic Workers. wrangler.jsonc requires worker_loaders: [{ binding: \"LOADER\" }].",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3. The MCP server is enabled by default (mcp: true), mounted at /_emdash/api/mcp, with bearer-token authentication.",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Dual-track plugin design",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Two formats: native (React + adminEntry + Portable Text blocks, trusted only) and standard (Block Kit, no React, can be sandboxed). The sandboxed list rejects native plugins at config time.",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "23 hooks (public docs only list 6): plugin lifecycle 4, content 6, media 2, cron 1, email 3, comment 4, page 2, plus a custom slot.",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Capability naming is being reorganised: 11 current names (network:request, content:read, …) plus 11 deprecated aliases (read:content, …) still accepted.",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Sandbox execution details",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Binding: LOADER (Cloudflare Worker Loader). At deploy time, packages/cloudflare/src/sandbox/wrapper.ts emits a wrapper JS file embedding plugin manifest metadata in comments. At runtime the host worker loads the isolate via the LOADER binding; context (KV / storage / email / users) is proxied via RPC over the BRIDGE service binding back to the host. Trusted and sandboxed plugins use identical callback signatures — but every sandboxed side-effect must pass the host's gate.",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "6-layer middleware chain",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "All order: pre — playground (if playground mode) → emdash/middleware (runtime init: DB + manifest) → emdash/middleware/redirect → emdash/middleware/setup → emdash/middleware/auth → emdash/middleware/request-context (ALS for edit mode and preview).",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Notable design choices",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Astro's built-in checkOrigin is deliberately disabled; EmDash provides its own dual-origin checkPublicCsrf to support reverse proxies and Docker deploys. D1 session: \"auto\" uses a SQLite bookmark in cookies for read-your-writes consistency without a centralised primary. Media filenames are ULIDs (e.g. 01KQY00MTRSX9Q7C2NW0GMTP28.jpg), not UUIDs — sortable and collision-free.",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Conclusion",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash's source is far richer than the public docs suggest, yet architecturally consistent. For teams interested in the converging \"serverless multi-tenant CMS\" + \"AI-agent native\" paradigm, the source itself is the best teacher.",
+									"_key": "k19s"
+								}
+							],
+							"_key": "k19"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The full report (student-starter/lecture-notes/02-code-deep-analysis.md) contains 4 Mermaid diagrams (system architecture, request lifecycle, plugin system, data flow) and an exhaustive tech-stack table.",
+									"_key": "k20s"
+								}
+							],
+							"_key": "k20"
+						}
+					],
+					"featured_image": {
+						"id": "01KQY69J3CJAEAVNF2A84GADJF",
+						"src": "/_emdash/api/media/file/01KQY69HWTKK67EMPDBYN3NMMC.png",
+						"alt": "EmDash 程式碼深度分析",
+						"width": 2752,
+						"height": 1536
+					}
+				}
+			},
+			{
+				"id": "research-skills-en",
+				"slug": "research-skills-en",
+				"status": "published",
+				"data": {
+					"title": "EmDash's 7 Built-in Claude Code Skills",
+					"lang": "en",
+					"topic": "builtin-skills",
+					"excerpt": "EmDash ships 7 Claude Code skills inside its monorepo (1491 lines + 24 attachments), proving that the AI agent is a first-class user — not an afterthought beside the built-in MCP server.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash's 7 Built-in Claude Code Skills",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Three groups",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Build group (do work in EmDash): building-emdash-site, creating-plugins, emdash-cli.",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Migration group (move from WordPress): wordpress-plugin-to-emdash, wordpress-theme-to-emdash.",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Quality group (general, not EmDash-specific): adversarial-reviewer, agent-browser.",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Skill summaries",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "building-emdash-site (146 lines + 4 references) — 5 life-saving gotchas: image fields are objects not strings; entry.id is the slug while entry.data.id is the ULID; taxonomy names must match the seed; always call Astro.cache.set(cacheHint); never use getStaticPaths.",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "creating-plugins (459 lines + 7 references, the largest skill) — exposes the dual entrypoint requirement: index.ts (build-time, Vite, side-effect-free) + sandbox-entry.ts (runtime, on the deployed server). Documents the Standard vs Native format matrix.",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "emdash-cli (245 lines + EDITING-FLOW.md) — built-in support for Cloudflare Access service tokens: --header / EMDASH_HEADERS pass through directly. Implies CI / agent automation against remote sites is normal usage.",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "wordpress-plugin-to-emdash (297 lines) — full WP-API to EmDash-API mapping table. Philosophy: clean-room implementation, never a line-by-line port.",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "wordpress-theme-to-emdash (83 lines + 6 phases + 5 references + scaffold = 11 attachments, the most prescriptive skill) — six phases discovery → design → templates → dynamic → seed → verify. Ships scaffold/{package.json, CHECKLIST.md, src/} ready for the agent to copy.",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "adversarial-reviewer (122 lines) — hostile code review. Mindset: guilty until proven innocent, no compliments, no hedging, prove it. Rule: silence means approval (don't pad with \"looks fine\" — save tokens).",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "agent-browser (139 lines) — the agent-browser CLI (not Playwright) uses accessibility trees + @e1/@e2 refs, so an agent never has to understand selectors.",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Design observations",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Skills dispatch to one another to avoid duplication (wordpress-plugin-to-emdash explicitly says \"see the creating-plugins skill for implementation\"). agent-browser is hand-built rather than wrapping Playwright = a minimal API designed for LLMs. adversarial-reviewer's \"silence means approval\" is a token-saving design. emdash-cli's built-in service-token support assumes CI / agent remote operation is standard.",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Conclusion",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash's \"AI-native\" stance is more than an in-process MCP server — it's a full AI development toolchain. Every skill assumes the LLM is the executor, not a sidekick to a human. This reframes EmDash itself: it isn't \"a CMS you can drive with AI,\" it's \"a CMS designed for AI.\"",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Teaching implication: students are encouraged to drop these 7 skills into .claude/skills/ so their own Claude Code instances inherit EmDash domain knowledge instantly. The full report is at student-starter/lecture-notes/03-builtin-skills-research.md.",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						}
+					],
+					"featured_image": {
+						"id": "01KQY69JPCPM4P2GWKTVFGX82M",
+						"src": "/_emdash/api/media/file/01KQY69JG25QEY6211NQZ5NSBT.png",
+						"alt": "EmDash 內建 7 個 Claude Code Skills",
+						"width": 2752,
+						"height": 1536
+					}
+				}
+			},
+			{
+				"id": "research-plugin-zh",
+				"slug": "research-plugin-zh",
+				"status": "published",
+				"data": {
+					"title": "用 EmDash plugin 解決 markdown 渲染相容性問題",
+					"lang": "zh",
+					"topic": "plugin-build",
+					"excerpt": "本站文章中 `**bold**` 等 markdown 標記原本顯示為純文字。我們不直接 patch DB，而是依照 EmDash plugin 規範寫了 `markdown-marks` plugin — 一個示範「為何要走官方 API」的真實工程案例。",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "用 EmDash plugin 解決 markdown 渲染相容性問題",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "問題起點",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "本站文章本來在內文出現 `**bold**`、`` `code` `` 這種 markdown 寫法時，並沒有被渲染成粗體或行內程式碼，而是原樣輸出。原因是 EmDash 用的是 **Portable Text** — 一種結構化 JSON 內容格式，每個 span 必須透過 `marks: [\"strong\"]` 的方式宣告樣式，而不是接受 markdown 字串。",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "我們最初寫進去的 portable text 把整段含 `**...**` 的文字直接放進一個 span，所以前端 PortableText 元件當然只能照原字串渲染。",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "兩條解決路徑",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**A. 直接改 DB**：寫一個 Python script 連 SQLite，遍歷 `ec_*` 表的 `content` 欄位，重組 portable text JSON 寫回。",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**B. 寫 EmDash plugin**：建立一個遵循官方 `definePlugin` API 的 plugin，掛 `content:beforeSave` hook，並提供一次性 migrate route 處理既有資料。",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "我們選 B。理由是**未來相容性**：EmDash 仍在 v0.x，portable text schema 與內部表結構都可能調整；A 路線等於在資料層硬編一個假設，每次主版升級就有破裂風險。B 路線只用 EmDash 公開的 plugin 契約，跟著官方走。",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "設計（依 creating-plugins skill）",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Plugin 規格：",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "id `markdown-marks` v0.1.0；format `standard`（雙 entrypoint）；trusted 模式跑在 host process；capabilities `content:read` + `content:write`（migrate route 用 `ctx.content.list/update`）。",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "主要 hook：`content:beforeSave` priority 50, errorPolicy `continue` — 在儲存前把 spans 中尚未帶 marks 的 markdown 字串展開成多個 spans 加正確 marks。",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "額外 routes：",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "`GET /_emdash/api/plugins/markdown-marks/status` 健康檢查 + 即場示範解析效果。",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "`POST /_emdash/api/plugins/markdown-marks/migrate` 一鍵掃 posts/pages/lessons 既有 entries 跑同一支 transform。",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "雙 entrypoint（最關鍵的工程約束）",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash plugin 有兩個檔必須拆開：",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**`src/index.ts`** — 描述子工廠（descriptor factory），跑在 Vite build time。必須是 side-effect-free。回傳 `PluginDescriptor` 物件含 id / version / capabilities / entrypoint。",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**`src/sandbox-entry.ts`** — 真正的 plugin 邏輯，跑在 deploy server runtime。`export default definePlugin({ hooks, routes })`。",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "兩者**不能合併**：一個跑在 Vite，一個跑在 V8 isolate；如果在 descriptor 那邊不小心 import runtime API，build 直接爆。skill 的 hooks reference 對這條規矩寫得很清楚。",
+									"_key": "k19s"
+								}
+							],
+							"_key": "k19"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "核心解析邏輯（src/lib/expand-marks.ts）",
+									"_key": "k20s"
+								}
+							],
+							"_key": "k20"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "三個 regex pattern 依序：`**...**` → `` `...` `` → `*...*`。順序很重要 — 長 marker 先處理，避免 `**bold**` 被當成兩個 `*italic*`。同時 italic regex 要避開 `field_*` 這類非語意星號。",
+									"_key": "k21s"
+								}
+							],
+							"_key": "k21"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "對單一 span 的 text 跑遞迴：找到第一個 marker 就把 text 拆成 before / inside / after 三段，inside 帶上對應 mark，遞迴處理 before 與 after。這樣 `**foo `code`**` 之類的巢狀也能展開。",
+									"_key": "k22s"
+								}
+							],
+							"_key": "k22"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "整個函式組是純函式（pure）— 沒有任何 I/O，可以在 Vite build、Workers runtime、Node 任何環境跑。`expandPortableText()` 在沒有變更時回傳同一個 reference，避免 hot path 浪費記憶體。",
+									"_key": "k23s"
+								}
+							],
+							"_key": "k23"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Hook 回傳語意",
+									"_key": "k24s"
+								}
+							],
+							"_key": "k24"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "`content:beforeSave` 回傳的 content 會直接覆蓋掉原 content。我們的 hook 邏輯：能展開就回 `expandAllPortableTextFields(event.content)`；遇到例外則回 `undefined` 讓 EmDash 保留原內容（errorPolicy:continue 確保 save 不被擋）。",
+									"_key": "k25s"
+								}
+							],
+							"_key": "k25"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "因為 `expandBlock` 會跳過已經帶 marks 的 span，hook **idempotent** — 同一篇文章連跑十次結果不變。",
+									"_key": "k26s"
+								}
+							],
+							"_key": "k26"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Migration route 的設計",
+									"_key": "k27s"
+								}
+							],
+							"_key": "k27"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Hook 只在「之後新編輯儲存」時跑。但我們有 14 篇既存 entry 是「事前」就寫進 DB 的，所以另寫了 `/migrate` route 一鍵補跑。",
+									"_key": "k28s"
+								}
+							],
+							"_key": "k28"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Route 邏輯：對每個目標 collection 用 `ctx.content.list({ limit, cursor })` 翻頁，每筆透過 `expandAllPortableTextFields(item.data)` 計算新版本，差異欄位才呼叫 `ctx.content.update(collection, id, patch)`。",
+									"_key": "k29s"
+								}
+							],
+							"_key": "k29"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "結果：posts 6/6、pages 2/2、lessons 6/6 — 14 篇全部更新，0 錯誤。",
+									"_key": "k30s"
+								}
+							],
+							"_key": "k30"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "安裝與接線",
+									"_key": "k31s"
+								}
+							],
+							"_key": "k31"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Plugin 用 npm `file:` 協定本地引用：`\"@local/markdown-marks\": \"file:./plugins/markdown-marks\"` 寫進 my-emdash-blog/package.json。`pnpm install` 讓 pnpm 建 symlink。",
+									"_key": "k32s"
+								}
+							],
+							"_key": "k32"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "astro.config.mjs 內 `import { markdownMarksPlugin } from \"@local/markdown-marks\"`，加到 `emdash({ plugins: [auditLogPlugin(), markdownMarksPlugin()] })`。重啟 dev server 即生效。",
+									"_key": "k33s"
+								}
+							],
+							"_key": "k33"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Plugin descriptor 的 `entrypoint` 字串是 `\"@local/markdown-marks/sandbox\"`，對應 plugin 自家 package.json 的 `\"./sandbox\"` export — 也就是 sandbox-entry.ts。",
+									"_key": "k34s"
+								}
+							],
+							"_key": "k34"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "過程中遇到的 3 個小坑",
+									"_key": "k35s"
+								}
+							],
+							"_key": "k35"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**1. `public: true` 沒讓 route 真的 public。** 文檔說 standard plugin route 加 `public: true` 就跳過認證，但實測 `/_emdash/api/plugins/markdown-marks/status` 仍回 401 UNAUTHORIZED。可能是新版本對 plugin route 加了一層 admin gate。解法：用 EmDash 內建的 dev-bypass：`GET /_emdash/api/setup/dev-bypass?redirect=/_emdash/admin` 自動建立 dev admin session，後續帶 cookie 就過。生產環境必須改用 admin token。",
+									"_key": "k36s"
+								}
+							],
+							"_key": "k36"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**2. Sandbox 模組不熱重載。** 改 sandbox-entry.ts 後，dev server 不會自動 reload plugin code，要 `kill $(lsof -ti :4321)` 重啟。",
+									"_key": "k37s"
+								}
+							],
+							"_key": "k37"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**3. CSRF header。** state-changing 的 plugin route（POST migrate）必須帶 `X-EmDash-Request: 1` header，否則 403 CSRF_REJECTED。這是 EmDash 整體 API 的規範，plugin route 也適用。",
+									"_key": "k38s"
+								}
+							],
+							"_key": "k38"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "教學意義",
+									"_key": "k39s"
+								}
+							],
+							"_key": "k39"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "這個 plugin 對學員是**最完整的真實案例**：",
+									"_key": "k40s"
+								}
+							],
+							"_key": "k40"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "(1) 從一個具體可見的問題出發（為什麼 `**bold**` 沒變粗？），(2) 用 plugin 而不是 patch DB（理解「為何要相容於框架契約」），(3) 涵蓋 hook + route + capability 三大 plugin feature，(4) 包含 migrate 解決「既有資料」這個真實系統會遇到的問題。",
+									"_key": "k41s"
+								}
+							],
+							"_key": "k41"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Plugin 已複製到 `student-starter/plugins-example/`，學員 git clone 即可取得整套程式碼當教材參考。",
+									"_key": "k42s"
+								}
+							],
+							"_key": "k42"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "結論",
+									"_key": "k43s"
+								}
+							],
+							"_key": "k43"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "「為什麼不要直接改 DB」其實就是一句話：**寫應用，不寫 hack**。這個 plugin 從 git clone EmDash 原始碼、讀 creating-plugins skill、設計 + 實作 + 驗證一條龍，總共約 35 分鐘。比起多寫一支 SQL 多花 25 分鐘，但換來的是「未來 EmDash 升級不會炸」這個保證 — 對教學示範與未來真實採用來說，這 25 分鐘絕對值得。",
+									"_key": "k44s"
+								}
+							],
+							"_key": "k44"
+						}
+					],
+					"featured_image": {
+						"id": "01KQY84DRHWBWXPMA2CA83JCP7",
+						"src": "/_emdash/api/media/file/01KQY84DKV77SNJ3PGH0GRTD3M.png",
+						"alt": "用 EmDash plugin 解決 markdown 渲染相容性問題",
+						"width": 2752,
+						"height": 1536
+					}
+				}
+			},
+			{
+				"id": "research-plugin-en",
+				"slug": "research-plugin-en",
+				"status": "published",
+				"data": {
+					"title": "Solving Markdown Rendering with an EmDash Plugin",
+					"lang": "en",
+					"topic": "plugin-build",
+					"excerpt": "Articles on this site originally rendered `**bold**` literally. Instead of patching the DB, we built `markdown-marks` — a plugin following EmDash's official API. This is a worked example of \"why go through the framework, not around it.\"",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Solving Markdown Rendering with an EmDash Plugin",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The starting point",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Articles on this site contained inline `**bold**` and `` `code` `` markers, but they rendered as literal text rather than as bold or inline code. EmDash uses **Portable Text** — a structured JSON content format where each span declares formatting via `marks: [\"strong\"]`, not by parsing markdown strings.",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Our initial portable text just stuffed the whole `**...**` line into one span — so the PortableText component had no choice but to render it verbatim.",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Two paths to a fix",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**A. Patch the DB directly**: write a Python script that opens SQLite, walks every `ec_*` table's `content` field, rebuilds the portable-text JSON, and writes it back.",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**B. Build an EmDash plugin**: implement `definePlugin` per EmDash's official API, attach a `content:beforeSave` hook, and provide a one-shot migrate route for existing content.",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "We chose B. The reason is **future compatibility**: EmDash is still v0.x, and the portable-text schema and internal table layout may shift. Path A bakes assumptions into the data layer that will break on every major upgrade. Path B uses only EmDash's published plugin contract — we move when EmDash moves.",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Design (per the creating-plugins skill)",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Plugin spec: id `markdown-marks` v0.1.0; format `standard` (dual entrypoint); trusted execution; capabilities `content:read` + `content:write` for the migrate route's `ctx.content.list/update`.",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Primary hook: `content:beforeSave`, priority 50, errorPolicy `continue` — before save, expand any markdown markers in spans without existing `marks` into multiple spans with proper marks.",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Auxiliary routes: `GET /_emdash/api/plugins/markdown-marks/status` for a health check + live demo; `POST /_emdash/api/plugins/markdown-marks/migrate` to sweep existing posts/pages/lessons through the same transform.",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The dual-entrypoint constraint",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash plugins must split two files:",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**`src/index.ts`** — descriptor factory, runs at Vite build time. Must be side-effect-free. Returns a `PluginDescriptor` (id / version / capabilities / entrypoint).",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**`src/sandbox-entry.ts`** — actual plugin logic, runs at request time on the deployed server. `export default definePlugin({ hooks, routes })`.",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "These cannot share a file: one runs in Vite, the other in a V8 isolate. Importing runtime APIs from the descriptor side means the build blows up. The hooks reference in the skill spells this out clearly.",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Core expansion logic (src/lib/expand-marks.ts)",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Three regex patterns, in this order: `**...**` → `` `...` `` → `*...*`. Order matters — longer markers first, otherwise `**bold**` decomposes into two `*italic*`. The italic regex also avoids `field_*` and word-boundary stars to keep non-semantic asterisks literal.",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "For each span text, recursion: find the first marker, split into before / inside / after, apply the mark to the recursed inside, and recurse on before and after as well. That gives nested handling for cases like `**foo `code`**` for free.",
+									"_key": "k19s"
+								}
+							],
+							"_key": "k19"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "All functions are pure — zero I/O, safe to run in Vite, Workers, or Node. `expandPortableText()` returns the same reference when nothing changes, keeping the hot path allocation-light.",
+									"_key": "k20s"
+								}
+							],
+							"_key": "k20"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Hook return semantics",
+									"_key": "k21s"
+								}
+							],
+							"_key": "k21"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "`content:beforeSave` returns either modified content (which replaces the original) or `undefined` (which keeps it). We return `expandAllPortableTextFields(event.content)` on success and `undefined` on exception, so a malformed input never blocks the save (errorPolicy `continue` reinforces this).",
+									"_key": "k22s"
+								}
+							],
+							"_key": "k22"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Because `expandBlock` skips spans that already carry marks, the hook is **idempotent** — re-running on the same article ten times yields the same result.",
+									"_key": "k23s"
+								}
+							],
+							"_key": "k23"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The migration route",
+									"_key": "k24s"
+								}
+							],
+							"_key": "k24"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The hook only fires on future saves. We had 14 entries pre-dating the plugin, so we wrote the `/migrate` route to backfill.",
+									"_key": "k25s"
+								}
+							],
+							"_key": "k25"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Route logic: for each target collection, paginate with `ctx.content.list({ limit, cursor })`. For each item, compute the expanded version with `expandAllPortableTextFields(item.data)`, and call `ctx.content.update(collection, id, patch)` with only the fields that actually changed.",
+									"_key": "k26s"
+								}
+							],
+							"_key": "k26"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Result: posts 6/6, pages 2/2, lessons 6/6 — 14 entries updated, zero errors.",
+									"_key": "k27s"
+								}
+							],
+							"_key": "k27"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Wiring it up",
+									"_key": "k28s"
+								}
+							],
+							"_key": "k28"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The plugin is referenced via npm's `file:` protocol: `\"@local/markdown-marks\": \"file:./plugins/markdown-marks\"` in `my-emdash-blog/package.json`. `pnpm install` builds the symlink.",
+									"_key": "k29s"
+								}
+							],
+							"_key": "k29"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "In `astro.config.mjs`: `import { markdownMarksPlugin } from \"@local/markdown-marks\"`, then add it to `emdash({ plugins: [auditLogPlugin(), markdownMarksPlugin()] })`. Restart the dev server.",
+									"_key": "k30s"
+								}
+							],
+							"_key": "k30"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The descriptor's `entrypoint` string is `\"@local/markdown-marks/sandbox\"`, which resolves to the `\"./sandbox\"` export in the plugin's package.json — i.e. sandbox-entry.ts.",
+									"_key": "k31s"
+								}
+							],
+							"_key": "k31"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Three small gotchas we hit",
+									"_key": "k32s"
+								}
+							],
+							"_key": "k32"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**1. `public: true` doesn't actually expose the route.** The skill says public routes skip auth, but in practice `/_emdash/api/plugins/markdown-marks/status` returned 401 UNAUTHORIZED. The current EmDash version seems to wrap plugin routes in an admin gate. Workaround: use the built-in dev bypass — `GET /_emdash/api/setup/dev-bypass?redirect=/_emdash/admin` mints a dev admin session, and cookie-bound subsequent calls work. Production deployments must use a real admin token instead.",
+									"_key": "k33s"
+								}
+							],
+							"_key": "k33"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**2. Sandbox modules don't hot-reload.** Edits to sandbox-entry.ts don't reload — `kill $(lsof -ti :4321)` and restart.",
+									"_key": "k34s"
+								}
+							],
+							"_key": "k34"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "**3. CSRF header.** State-changing plugin routes (POST `/migrate`) require `X-EmDash-Request: 1`, otherwise 403 CSRF_REJECTED. This applies to all EmDash APIs, plugins included.",
+									"_key": "k35s"
+								}
+							],
+							"_key": "k35"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Teaching value",
+									"_key": "k36s"
+								}
+							],
+							"_key": "k36"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "For students, this is the most complete real-world case:",
+									"_key": "k37s"
+								}
+							],
+							"_key": "k37"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "(1) starts from a visible bug (\"why isn't `**bold**` bold?\"), (2) uses a plugin instead of a DB patch (the lesson on \"respect the framework's contract\"), (3) covers hooks + routes + capabilities — three core plugin features at once, and (4) includes a migration step, which is what real systems actually need beyond Hello-World plugins.",
+									"_key": "k38s"
+								}
+							],
+							"_key": "k38"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The plugin is copied to `student-starter/plugins-example/` so a `git clone` gives students the entire source as study material.",
+									"_key": "k39s"
+								}
+							],
+							"_key": "k39"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Conclusion",
+									"_key": "k40s"
+								}
+							],
+							"_key": "k40"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "\"Why not just patch the DB?\" boils down to one line: **write applications, not hacks**. The whole plugin took about 35 minutes from cloning EmDash source, reading the creating-plugins skill, designing, implementing, and verifying. That's 25 minutes more than a one-off SQL patch — and in exchange we get \"future EmDash upgrades won't break this\" as a permanent guarantee. For a teaching demo and for any real future adoption, those 25 minutes are obviously worth it.",
+									"_key": "k41s"
+								}
+							],
+							"_key": "k41"
+						}
+					],
+					"featured_image": {
+						"id": "01KQY84DRHWBWXPMA2CA83JCP7",
+						"src": "/_emdash/api/media/file/01KQY84DKV77SNJ3PGH0GRTD3M.png",
+						"alt": "用 EmDash plugin 解決 markdown 渲染相容性問題",
+						"width": 2752,
+						"height": 1536
+					}
+				}
+			}
+		],
+		"lessons": [
+			{
+				"id": "lesson-zh-01",
+				"slug": "zh-01-technical-research",
+				"status": "published",
+				"data": {
+					"title": "第 1 課：用 Claude Code 做技術研究",
+					"lang": "zh",
+					"phase": "1",
+					"summary": "示範技術研究流程：書記查記憶 → 文書官 + 收集師補資料 → 三角論證 → 寫報告。",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "第 1 課：技術研究流程",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "為什麼要先研究？",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Vibe Coding 不是亂寫，而是「先理解、後動手」。本課示範如何用 Claude Code 的 technical-research skill，在不到 30 分鐘內完成一份結構化技術研究。",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "7 步驟流程",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1) 書記官（OpenMemory）查既有記憶 — 不重複勞動",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2) 文書官（Context7）+ 收集師（Perplexity）平行收集官方 / 業界資料",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3) 書記官把資料整理成技術文件並建記憶",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "4) 依文件做相容性、風險、可行性分析",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "5) 三角論證：總協、收集師、分析師三方獨立投票（3:0 / 2:1 / 1:1:1）",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "6) 總協撰寫研究報告",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "7) 書記官記錄報告位置與摘要",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "今日範例：研究 Cloudflare EmDash CMS",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "我們用這個流程研究 Cloudflare 2026/4/1 發布的開源 CMS。發現它是 TypeScript + Astro + Workers 的「WordPress 精神繼承者」，v0.1.0 早期 preview，AI agent 為第一級使用者。",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "重要警告：名稱衝突",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "GitHub 上 `emdash-cms/emdash`（我們的目標）與 `generalaction/emdash`（YC W26 agentic dev tool）同名不同物，搜尋時務必認倉庫所有者。",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "練習",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "用同樣流程研究你感興趣的另一個 OSS 專案，產出一份不超過 1500 字的技術研究報告。",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						}
+					]
+				}
+			},
+			{
+				"id": "lesson-zh-02",
+				"slug": "zh-02-code-deep-analysis",
+				"status": "published",
+				"data": {
+					"title": "第 2 課：程式碼深度分析",
+					"lang": "zh",
+					"phase": "2",
+					"summary": "用 serena + 5 phase 框架掃整個 monorepo，產出 Mermaid 架構圖。",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "第 2 課：程式碼深度分析",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "工具：serena MCP",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "serena 提供「IDE 級別」的 LSP 級別程式碼操作。比 grep 快、比 read 精準。重要工具：`get_symbols_overview`、`find_symbol`、`find_referencing_symbols`。",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "5 個 Phase",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Phase 0 — 環境準備：clone repo、啟動 serena",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Phase 1 — 目錄掃描：找入口、識別模組",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Phase 2 — 符號分析：核心類別、方法、依賴鏈",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Phase 3 — 架構評估：模式、技術棧、技術債",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Phase 4 — 文檔產出：Mermaid 架構圖、資料流圖、依賴圖",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash 真實規模（公開文檔遠未涵蓋）",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "12 個 packages、156 個 Astro 路由、core/src 33 子目錄。Plugin Manager 31 個方法 555 LOC。MCP server 單函數 1841 行！",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "修正公開文檔的關鍵錯誤",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1) 編輯器是 TipTap，不是部分評論說的 TinyMCE",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2) Plugin sandbox 用 Cloudflare 的 Worker Loader（新 binding），不是 Workers for Platforms",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3) MCP server 預設啟用，路徑 `/_emdash/api/mcp`",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Vibe Coding 心法",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "「用 AI 讀大量程式碼比自己讀快十倍」，但要：(a) 給 AI 明確問題；(b) 用結構化工具（serena）；(c) 驗證 AI 結論。",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "練習",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "選一個你看過的 OSS repo，跑 5 phase 流程，產出至少 2 張 Mermaid 圖。",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						}
+					]
+				}
+			},
+			{
+				"id": "lesson-zh-03",
+				"slug": "zh-03-local-installation",
+				"status": "published",
+				"data": {
+					"title": "第 3 課：本機安裝 EmDash",
+					"lang": "zh",
+					"phase": "3",
+					"summary": "從零到 dev server 跑通的完整流程。",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "第 3 課：本機安裝 EmDash CMS",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "環境需求",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Node.js ≥ 22.12.0（避免奇數版本如 21、23、25）；pnpm 10.28+（推薦透過 corepack 啟用）；SQLite 3.x（macOS / Linux 預裝）。",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "一行指令 scaffold",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "`pnpm create emdash@latest my-emdash-blog --template blog --platform node --pm pnpm --install --yes`",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "這條指令包：下載 blog template、寫 EMDASH_ENCRYPTION_KEY 到 .env、安裝所有依賴。",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Bootstrap：建 SQLite + Seed",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "`pnpm bootstrap` = `emdash init`（migrations）+ `emdash seed`（套用 seed.json）。會建 data.db（SQLite）、下載 Unsplash 範例圖到 uploads/。",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "啟動 dev server",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "`pnpm dev` → http://localhost:4321（Astro v6.2.2 約 2.5 秒就緒）。",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "三大訪問點",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "首頁：http://localhost:4321/",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Admin：http://localhost:4321/_emdash/admin（首次需註冊 passkey）",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "API：http://localhost:4321/_emdash/api/auth/mode（回 JSON）",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "觀察重點",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "啟動時會看到 `[hooks] Plugin \"audit-log\" ... missing capability — skipping`，這是 capability 守關真實運作的證據。",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "媒體檔名是 ULID（如 `01KQY00MTRSX9Q7C2NW0GMTP28.jpg`），不是 UUID — 可排序、collision-free。",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "練習",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "在你的電腦完成本機安裝；註冊 passkey；建立第一篇 post 並在前台確認可見。",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						}
+					]
+				}
+			},
+			{
+				"id": "lesson-en-01",
+				"slug": "en-01-technical-research",
+				"status": "published",
+				"data": {
+					"title": "Lesson 1: Technical Research with Claude Code",
+					"lang": "en",
+					"phase": "1",
+					"summary": "Demonstrates the technical research workflow: librarian → document officer + collector → triangulation → report.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Lesson 1: Technical Research Workflow",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Why research first?",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Vibe Coding is not random typing. It is \"understand first, code second.\" This lesson demonstrates how Claude Code's technical-research skill produces a structured tech report in under 30 minutes.",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The 7-step workflow",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1) Librarian (OpenMemory) checks existing memories — avoid duplicate work",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2) Document Officer (Context7) + Collector (Perplexity) gather official + industry data in parallel",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3) Librarian writes a structured tech document and stores it",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "4) Compatibility, risk, feasibility analysis based on the document",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "5) Triangulation: Coordinator, Collector, Analyst vote independently (3:0 / 2:1 / 1:1:1)",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "6) Coordinator writes the research report",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "7) Librarian records report location + summary",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Today's example: Cloudflare EmDash CMS",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "We applied this workflow to Cloudflare's open-source CMS released 2026-04-01. Found: TypeScript + Astro + Workers \"spiritual successor to WordPress,\" v0.1.0 early preview, AI agent as first-class user.",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Critical warning: name collision",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "On GitHub, `emdash-cms/emdash` (our target) and `generalaction/emdash` (YC W26 agentic dev tool) share a name. Always verify the repo owner.",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Exercise",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Apply this workflow to another OSS project of your interest. Produce a research report under 1500 words.",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						}
+					]
+				}
+			},
+			{
+				"id": "lesson-en-02",
+				"slug": "en-02-code-deep-analysis",
+				"status": "published",
+				"data": {
+					"title": "Lesson 2: Code Deep Analysis",
+					"lang": "en",
+					"phase": "2",
+					"summary": "Use serena + a 5-phase framework to scan a monorepo and produce Mermaid diagrams.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Lesson 2: Code Deep Analysis",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Tool: serena MCP",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "serena provides IDE-grade (LSP-level) code operations. Faster than grep, more precise than read. Key tools: `get_symbols_overview`, `find_symbol`, `find_referencing_symbols`.",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The 5 phases",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Phase 0 — Environment prep: clone repo, activate serena",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Phase 1 — Directory scan: find entry points, identify modules",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Phase 2 — Symbol analysis: core classes, methods, dependency chains",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Phase 3 — Architecture eval: patterns, tech stack, tech debt",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Phase 4 — Documentation: Mermaid architecture diagrams, data flow, dependency graphs",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "EmDash's real scale (well beyond public docs)",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "12 packages, 156 Astro routes, 33 core/src subdirectories. PluginManager: 31 methods, 555 LOC. MCP server: a single 1841-line function!",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Corrections to public documentation",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1) The editor is TipTap, not TinyMCE as some reviews claimed",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2) Plugin sandbox uses Cloudflare Worker Loader (a newer binding), not Workers for Platforms",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3) MCP server is enabled by default at `/_emdash/api/mcp`",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Vibe Coding mindset",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "\"AI reads code 10x faster than you,\" but you must: (a) ask AI specific questions; (b) use structured tools (serena); (c) verify AI conclusions.",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Exercise",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Pick an OSS repo you have read before. Run the 5-phase analysis and produce at least 2 Mermaid diagrams.",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						}
+					]
+				}
+			},
+			{
+				"id": "lesson-en-03",
+				"slug": "en-03-local-installation",
+				"status": "published",
+				"data": {
+					"title": "Lesson 3: Installing EmDash Locally",
+					"lang": "en",
+					"phase": "3",
+					"summary": "Full path from zero to a running dev server.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "h1",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Lesson 3: Installing EmDash Locally",
+									"_key": "k0s"
+								}
+							],
+							"_key": "k0"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Prerequisites",
+									"_key": "k1s"
+								}
+							],
+							"_key": "k1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Node.js ≥ 22.12.0 (avoid odd-numbered releases like 21/23/25); pnpm 10.28+ (recommended via corepack); SQLite 3.x (preinstalled on macOS/Linux).",
+									"_key": "k2s"
+								}
+							],
+							"_key": "k2"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "One-liner scaffold",
+									"_key": "k3s"
+								}
+							],
+							"_key": "k3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "`pnpm create emdash@latest my-emdash-blog --template blog --platform node --pm pnpm --install --yes`",
+									"_key": "k4s"
+								}
+							],
+							"_key": "k4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "This downloads the blog template, writes EMDASH_ENCRYPTION_KEY to .env, and installs all dependencies in one go.",
+									"_key": "k5s"
+								}
+							],
+							"_key": "k5"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Bootstrap: SQLite + Seed",
+									"_key": "k6s"
+								}
+							],
+							"_key": "k6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "`pnpm bootstrap` = `emdash init` (migrations) + `emdash seed` (apply seed.json). Builds data.db, downloads Unsplash sample images to uploads/.",
+									"_key": "k7s"
+								}
+							],
+							"_key": "k7"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Start dev server",
+									"_key": "k8s"
+								}
+							],
+							"_key": "k8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "`pnpm dev` → http://localhost:4321 (Astro v6.2.2, ready in ~2.5s).",
+									"_key": "k9s"
+								}
+							],
+							"_key": "k9"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Three URLs to know",
+									"_key": "k10s"
+								}
+							],
+							"_key": "k10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Site:  http://localhost:4321/",
+									"_key": "k11s"
+								}
+							],
+							"_key": "k11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Admin: http://localhost:4321/_emdash/admin (first visit registers a passkey)",
+									"_key": "k12s"
+								}
+							],
+							"_key": "k12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "API:   http://localhost:4321/_emdash/api/auth/mode (returns JSON)",
+									"_key": "k13s"
+								}
+							],
+							"_key": "k13"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Things to watch",
+									"_key": "k14s"
+								}
+							],
+							"_key": "k14"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Boot logs include `[hooks] Plugin \"audit-log\" ... missing capability — skipping` — concrete proof of the capability gate at runtime.",
+									"_key": "k15s"
+								}
+							],
+							"_key": "k15"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Media files are named with ULIDs (e.g. `01KQY00MTRSX9Q7C2NW0GMTP28.jpg`), not UUIDs — sortable, collision-free.",
+									"_key": "k16s"
+								}
+							],
+							"_key": "k16"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Exercise",
+									"_key": "k17s"
+								}
+							],
+							"_key": "k17"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Install EmDash on your laptop, register a passkey, create your first post, and verify it on the public site.",
+									"_key": "k18s"
+								}
+							],
+							"_key": "k18"
+						}
+					]
+				}
+			}
+		]
+	}
+}

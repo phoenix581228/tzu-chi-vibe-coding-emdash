@@ -1,0 +1,75 @@
+---
+import { getEmDashEntry, getEmDashCollection, decodeSlug } from "emdash";
+import { PortableText } from "emdash/ui";
+import Base from "../../layouts/Base.astro";
+import { getLang, LABELS } from "../../utils/lang";
+
+const lang = getLang(Astro);
+const t = LABELS[lang];
+
+const slug = decodeSlug(Astro.params.slug);
+if (!slug) return Astro.redirect("/404");
+
+const { entry: lesson, cacheHint } = await getEmDashEntry("lessons", slug);
+
+if (!lesson) return Astro.redirect("/404");
+
+// Cross-language redirect: if visitor's lang differs from this lesson's lang,
+// jump to the matching phase in the other language.
+const { entries: all } = await getEmDashCollection("lessons");
+if (lesson.data.lang && lesson.data.lang !== lang) {
+	const sibling = all.find(
+		(l) => l.data.lang === lang && l.data.phase === lesson.data.phase,
+	);
+	if (sibling) return Astro.redirect(`/lessons/${sibling.id}`);
+}
+
+Astro.cache.set(cacheHint);
+
+const otherLang = lang === "zh" ? "en" : "zh";
+const otherSibling = all.find(
+	(l) => l.data.lang === otherLang && l.data.phase === lesson.data.phase,
+);
+---
+
+<Base title={lesson.data.title} description={lesson.data.summary}>
+	<article class="lesson">
+		<header class="lesson-header">
+			<a href="/lessons" class="back">{t.lessons_back}</a>
+			<span class="phase">
+				{t.lessons_phase} {lesson.data.phase} ·
+				{lesson.data.lang === "zh" ? "繁體中文" : "English"}
+			</span>
+			<h1>{lesson.data.title}</h1>
+			<p class="summary">{lesson.data.summary}</p>
+			{otherSibling && (
+				<p class="sibling-hint">
+					<a href={`/lessons/${otherSibling.id}`}>
+						{t.switch_to_other} →
+					</a>
+				</p>
+			)}
+		</header>
+		<div class="lesson-body">
+			<PortableText value={lesson.data.content} />
+		</div>
+	</article>
+</Base>
+
+<style>
+	.lesson { max-width: 760px; margin: 0 auto; padding: 2rem 1rem; }
+	.lesson-header { margin-bottom: 2rem; }
+	.back { display: inline-block; margin-bottom: 1rem; color: var(--color-text-muted, #666); text-decoration: none; }
+	.back:hover { color: currentColor; }
+	.phase { display: inline-block; font-size: .8rem; font-weight: 600; padding: .2rem .6rem; border-radius: .25rem; background: var(--color-accent, #f0f0f0); }
+	.lesson h1 { font-size: 2.25rem; margin: .5rem 0; line-height: 1.2; }
+	.summary { font-size: 1.1rem; color: var(--color-text-muted, #555); line-height: 1.6; }
+	.sibling-hint { margin-top: .5rem; font-size: .9rem; }
+	.sibling-hint a { color: var(--color-accent); text-decoration: none; }
+	.sibling-hint a:hover { text-decoration: underline; }
+	.lesson-body { line-height: 1.8; }
+	.lesson-body :global(h1) { font-size: 1.75rem; margin-top: 2rem; }
+	.lesson-body :global(h2) { font-size: 1.4rem; margin-top: 1.5rem; }
+	.lesson-body :global(h3) { font-size: 1.15rem; margin-top: 1.25rem; }
+	.lesson-body :global(p) { margin: 1rem 0; }
+</style>

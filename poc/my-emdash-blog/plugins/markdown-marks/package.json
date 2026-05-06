@@ -1,0 +1,14 @@
+{
+	"name": "@local/markdown-marks",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Auto-expand inline **bold** / *em* / `code` markers in Portable Text spans into proper marks. Built for Tzu Chi University Vibe Coding lab as a teaching plugin.",
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts",
+		"./sandbox": "./src/sandbox-entry.ts"
+	},
+	"peerDependencies": {
+		"emdash": "*"
+	}
+}
