@@ -10,6 +10,31 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## [1.0.1] — 2026-05-06
+
+Cloudflare deployment hardening + lessons learned from a failed D1 SQL-dump import attempt.
+
+### Changed
+
+- **Cloudflare D1 database recreated** with a fresh ID (`9f270577…ed79` → `6ca2eb8d…d66d`). The old D1 was deleted because EmDash's first-visit auto-migration created the full schema with foreign-key constraints, and `wrangler d1 execute --remote --file <dump>` rejected DROP-then-CREATE re-imports under D1's mandatory FK enforcement.
+- `wrangler.jsonc`: updated `database_id` to the new D1.
+- Worker redeployed (`Current Version ID: 79b88f42-93c6-4615-a02b-150d5f38ef2f`) so the binding points at the clean DB.
+- Site header version badge bumped to v1.0.1; release tag link updated accordingly.
+
+### Documented
+
+- **Why `sqlite3 .dump` cannot replace EmDash CLI for prod content sync** — three independent blockers in D1 vs SQLite:
+  1. `INSERT INTO sqlite_schema` to recreate FTS5 virtual tables is rejected by D1 (sqlite_schema is read-only there).
+  2. `PRAGMA foreign_keys = OFF` and `PRAGMA defer_foreign_keys = true` do not actually disable FK enforcement on D1; the engine treats them as hints inside the implicit transaction wrapper.
+  3. Even after stripping all explicit FK constraints from the dump, DROP TABLE on a previously-migrated EmDash schema still fails because child rows in already-migrated tables (e.g. `_emdash_migrations`, default settings) reference rows the dump tries to drop, and D1 can't be told to ignore that.
+- **EmDash CLI requires prod to already have an admin user** — `init`, `login`, `schema`, `content`, `media` all return `Not authenticated` against a fresh prod. There is no `setup` / `bootstrap` CLI subcommand. The first admin must be registered through the browser-based setup wizard with a WebAuthn passkey; this is by design (no CLI back-door).
+
+### Not changed (deferred to v1.1.0)
+
+- Production content sync. The Cloudflare deployment ships the v1.0.1 *application*; the prod D1 is empty until a human runs the setup wizard and `emdash login`. CHANGELOG already lists this as a v1.1.0 stretch goal.
+
+---
+
 ## [1.0.0] — 2026-05-06
 
 第一個完整公開版本：完成慈濟大學資管系大四 Vibe Coding 實機課程的全部教學交付物。
