@@ -38,6 +38,7 @@ export const LABELS = {
 		footer_rss: "RSS 訂閱",
 		footer_powered_by: "由",
 		footer_powered_by_suffix: "驅動",
+		source_on_github: "在 GitHub 看原始碼",
 
 		// Theme
 		theme_light: "亮色模式",
@@ -78,6 +79,7 @@ export const LABELS = {
 		footer_rss: "RSS Feed",
 		footer_powered_by: "Powered by",
 		footer_powered_by_suffix: "",
+		source_on_github: "View source on GitHub",
 
 		theme_light: "Light mode",
 		theme_dark: "Dark mode",
