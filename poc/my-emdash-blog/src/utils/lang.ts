@@ -40,6 +40,7 @@ export const LABELS = {
 		footer_powered_by_suffix: "驅動",
 		source_on_github: "在 GitHub 看原始碼",
 		view_cloudflare_demo: "看 Cloudflare 公網版",
+		version_label: "版本",
 
 		// Theme
 		theme_light: "亮色模式",
@@ -82,6 +83,7 @@ export const LABELS = {
 		footer_powered_by_suffix: "",
 		source_on_github: "View source on GitHub",
 		view_cloudflare_demo: "Cloudflare live demo",
+		version_label: "Version",
 
 		theme_light: "Light mode",
 		theme_dark: "Dark mode",

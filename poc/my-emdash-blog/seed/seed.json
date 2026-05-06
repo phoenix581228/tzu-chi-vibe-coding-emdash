@@ -4204,6 +4204,304 @@
 								}
 							],
 							"_key": "k44"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "教訓：seed CLI 不走 plugin hook（v1.0.0 課後反饋環）",
+									"_key": "v1zh_0s"
+								}
+							],
+							"_key": "v1zh_0"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "本文上線到 Cloudflare prod 後，課堂老師看到一段內文出現 `",
+									"_key": "v1zh_1sa"
+								},
+								{
+									"_type": "span",
+									"text": "1. 下對指令的能力。",
+									"_key": "v1zh_1sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "` 純文字 — markdown 字面沒被渲染成粗體。明明本機 demo 已經跑過 plugin migrate，所有 14 個 entries 都驗證過會渲染了。",
+									"_key": "v1zh_1sc"
+								}
+							],
+							"_key": "v1zh_1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "追查發現：",
+									"_key": "v1zh_2saa"
+								},
+								{
+									"_type": "span",
+									"text": "emdash seed",
+									"_key": "v1zh_2sab",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " CLI 把 seed.json 內容",
+									"_key": "v1zh_2sac"
+								},
+								{
+									"_type": "span",
+									"text": "直接 INSERT 到資料庫",
+									"_key": "v1zh_2sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "，不走 admin API 的 ",
+									"_key": "v1zh_2sca"
+								},
+								{
+									"_type": "span",
+									"text": "content:beforeSave",
+									"_key": "v1zh_2scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " hook。也就是說：",
+									"_key": "v1zh_2scc"
+								}
+							],
+							"_key": "v1zh_2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Plugin hook 攔截路徑",
+									"_key": "v1zh_3sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：admin UI 編輯儲存 → API → content:beforeSave hook → DB（妥）",
+									"_key": "v1zh_3sc"
+								}
+							],
+							"_key": "v1zh_3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Seed CLI 路徑",
+									"_key": "v1zh_4sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：seed.json → INSERT → DB（",
+									"_key": "v1zh_4sca"
+								},
+								{
+									"_type": "span",
+									"text": "繞過 hook",
+									"_key": "v1zh_4scb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "）",
+									"_key": "v1zh_4scc"
+								}
+							],
+							"_key": "v1zh_4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "結論很硬：seed 是 system-level 操作，不是業務操作；plugin hook 只負責「將來不在你掌控中的資料來源」（admin UI、外部 import）。能在 seed 階段就解決的「資料正規化」不應留給 hook 補救。",
+									"_key": "v1zh_5s"
+								}
+							],
+							"_key": "v1zh_5"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "修法",
+									"_key": "v1zh_6s"
+								}
+							],
+							"_key": "v1zh_6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "對 seed.json 跑一次與 plugin 相同的 expand 邏輯，讓 seed 檔本身就帶正規 Portable Text marks。下次 prod re-seed、學員 clone 後 bootstrap，看到的內容都直接是渲染好的，不需要事後跑 plugin migrate route。",
+									"_key": "v1zh_7s"
+								}
+							],
+							"_key": "v1zh_7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Plugin migrate route 仍保留為 legacy 資料的補救工具（例如：把外部 import 的 markdown 字串轉正規），但",
+									"_key": "v1zh_8sa"
+								},
+								{
+									"_type": "span",
+									"text": "新部署的乾淨 seed 不再需要它",
+									"_key": "v1zh_8sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "。",
+									"_key": "v1zh_8sc"
+								}
+							],
+							"_key": "v1zh_8"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "給學員的工程教訓",
+									"_key": "v1zh_9s"
+								}
+							],
+							"_key": "v1zh_9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "三條 take-away：",
+									"_key": "v1zh_10s"
+								}
+							],
+							"_key": "v1zh_10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1. 知道 hook 在哪一層",
+									"_key": "v1zh_11sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：每個 hook 都有它攔截的具體 API path。文件可能不寫，但你要從原始碼或實測知道。",
+									"_key": "v1zh_11sc"
+								}
+							],
+							"_key": "v1zh_11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2. 資料正規化盡量在源頭",
+									"_key": "v1zh_12sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：能在 seed / 匯入腳本就寫對的格式，就不要靠後置 hook。後置補救是除錯時的工具，不是正常流程。",
+									"_key": "v1zh_12sc"
+								}
+							],
+							"_key": "v1zh_12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3. dogfooding 才看得見這種 bug",
+									"_key": "v1zh_13sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "：本機跑得好不代表 prod 跑得好。Cloudflare 部署到瀏覽器訪問是課程的最後一里路 — 沒走完不算課程結束。",
+									"_key": "v1zh_13sc"
+								}
+							],
+							"_key": "v1zh_13"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "這段教訓寫進來時，也就是這份教學專案 v1.0.0 release 的時刻。",
+									"_key": "v1zh_14s"
+								}
+							],
+							"_key": "v1zh_14"
 						}
 					],
 					"featured_image": {
@@ -5623,6 +5921,305 @@
 								}
 							],
 							"_key": "k41"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Lesson: emdash seed bypasses plugin hooks (v1.0.0 feedback loop)",
+									"_key": "v1en_0s"
+								}
+							],
+							"_key": "v1en_0"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "After this article shipped to Cloudflare production, the instructor noticed a paragraph rendering as literal `",
+									"_key": "v1en_1sa"
+								},
+								{
+									"_type": "span",
+									"text": "1. Writing the right prompt.",
+									"_key": "v1en_1sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": "` — the markdown asterisks weren't being turned into bold. Yet on local dev, the plugin migrate route had already processed all 14 entries and the markup looked correct.",
+									"_key": "v1en_1sc"
+								}
+							],
+							"_key": "v1en_1"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Root cause: ",
+									"_key": "v1en_2saa"
+								},
+								{
+									"_type": "span",
+									"text": "emdash seed",
+									"_key": "v1en_2sab",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " CLI ",
+									"_key": "v1en_2sac"
+								},
+								{
+									"_type": "span",
+									"text": "INSERTs directly into the database",
+									"_key": "v1en_2sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ", bypassing the admin API's ",
+									"_key": "v1en_2sca"
+								},
+								{
+									"_type": "span",
+									"text": "content:beforeSave",
+									"_key": "v1en_2scb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " hook. In other words:",
+									"_key": "v1en_2scc"
+								}
+							],
+							"_key": "v1en_2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Plugin hook path",
+									"_key": "v1en_3sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ": admin UI edit → API → content:beforeSave → DB (intercepted ✓)",
+									"_key": "v1en_3sc"
+								}
+							],
+							"_key": "v1en_3"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Seed CLI path",
+									"_key": "v1en_4sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ": seed.json → INSERT → DB (",
+									"_key": "v1en_4sca"
+								},
+								{
+									"_type": "span",
+									"text": "bypasses hook",
+									"_key": "v1en_4scb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": ")",
+									"_key": "v1en_4scc"
+								}
+							],
+							"_key": "v1en_4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The takeaway is sharp: seed is a system-level operation, not a business operation. Plugin hooks intercept \"data sources you don't control\" (admin UI, external imports). Anything you can normalise at seed time should not be left to a hook to clean up later.",
+									"_key": "v1en_5s"
+								}
+							],
+							"_key": "v1en_5"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The fix",
+									"_key": "v1en_6s"
+								}
+							],
+							"_key": "v1en_6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Run the same expand-marks pass against seed.json itself, so the seed file ships canonical Portable Text marks. Future prod re-seeds and student ",
+									"_key": "v1en_7sa"
+								},
+								{
+									"_type": "span",
+									"text": "pnpm bootstrap",
+									"_key": "v1en_7sb",
+									"marks": [
+										"code"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " calls then read correct data on first INSERT — no \"run the migrate route afterwards\" step required.",
+									"_key": "v1en_7sc"
+								}
+							],
+							"_key": "v1en_7"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "The plugin's migrate route is still kept around for ",
+									"_key": "v1en_8sa"
+								},
+								{
+									"_type": "span",
+									"text": "legacy data",
+									"_key": "v1en_8sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " (e.g. cleaning up an external markdown import), but a fresh deploy with this seed file no longer needs it.",
+									"_key": "v1en_8sc"
+								}
+							],
+							"_key": "v1en_8"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Three take-aways for students",
+									"_key": "v1en_9s"
+								}
+							],
+							"_key": "v1en_9"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1. Know which API path your hook intercepts.",
+									"_key": "v1en_10sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " Every hook attaches to a specific API entrypoint. The docs may not say so explicitly — read source or test it.",
+									"_key": "v1en_10sc"
+								}
+							],
+							"_key": "v1en_10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2. Normalise at the source whenever possible.",
+									"_key": "v1en_11sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " If the seed / import script can write the canonical format, don't lean on a hook to clean it up later. Post-hoc fix-ups are a debugging tool, not a normal flow.",
+									"_key": "v1en_11sc"
+								}
+							],
+							"_key": "v1en_11"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3. Dogfooding is what catches bugs like this.",
+									"_key": "v1en_12sb",
+									"marks": [
+										"strong"
+									]
+								},
+								{
+									"_type": "span",
+									"text": " \"Works locally\" doesn't mean \"works in prod.\" Cloudflare deploy → browser-on-public-URL is the last mile of the course — not running it is not finishing.",
+									"_key": "v1en_12sc"
+								}
+							],
+							"_key": "v1en_12"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Adding this lesson is also the moment the project tags its v1.0.0 release.",
+									"_key": "v1en_13s"
+								}
+							],
+							"_key": "v1en_13"
 						}
 					],
 					"featured_image": {
