@@ -40,6 +40,12 @@ Vibe Coding 不是「讓 AI 替你寫」，而是「讓 AI 跟你一起寫」。
 
 這個 repo 本身就是教材。你看到的每一篇研究文章、每一張代表圖、每一個雙語切換按鈕、每一個 plugin hook，都是課堂 2 小時內由師生協同 Claude Code AI agent 產出，並 dogfood 到 EmDash 站本身。
 
+### 公網 demo / Live demo
+
+🌐 **https://emdash-tzu-chi.phoenix-582.workers.dev** — Cloudflare Workers + D1 + R2 部署版
+
+> 完整部署流程與 post-deploy setup 紀錄見 [`docs/CLOUDFLARE_DEPLOY_NOTES.md`](./docs/CLOUDFLARE_DEPLOY_NOTES.md)。
+
 ### 快速上手（學員）
 
 ```bash
@@ -129,6 +135,12 @@ Vibe Coding is not "let the AI write for you" — it's "writing with the AI." Th
 ### Teaching paradigm: dogfooding
 
 This repo is itself the teaching material. Every research article, every cover image, every language toggle, every plugin hook you see was produced live in a 2-hour session by students collaborating with the Claude Code AI agent — and then dogfooded back into the EmDash site.
+
+### Live demo
+
+🌐 **https://emdash-tzu-chi.phoenix-582.workers.dev** — deployed on Cloudflare Workers + D1 + R2.
+
+> Full deploy log + post-deploy setup notes: [`docs/CLOUDFLARE_DEPLOY_NOTES.md`](./docs/CLOUDFLARE_DEPLOY_NOTES.md).
 
 ### Quick start (students)
 

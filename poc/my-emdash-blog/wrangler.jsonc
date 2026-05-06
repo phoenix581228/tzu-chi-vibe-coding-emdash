@@ -1,0 +1,35 @@
+{
+	// Tzu Chi University Vibe Coding × EmDash CMS — Cloudflare deploy config
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "emdash-tzu-chi",
+	"compatibility_date": "2026-01-14",
+	"compatibility_flags": ["nodejs_compat", "disable_nodejs_process_v2"],
+
+	// EmDash plugin-audit-log + markdown-marks both run trusted (in-process).
+	// No worker_loaders binding — sandboxed plugins are NOT used on this site.
+
+	// Static assets are served from dist/ by the Cloudflare Astro adapter.
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "emdash-tzu-chi-db",
+			"database_id": "9f270577-1215-4284-b386-86d99579ed79"
+		}
+	],
+
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "emdash-tzu-chi-media"
+		}
+	],
+
+	"observability": {
+		"enabled": true
+	}
+}

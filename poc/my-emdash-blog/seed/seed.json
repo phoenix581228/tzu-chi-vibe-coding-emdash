@@ -1220,11 +1220,11 @@
 						}
 					],
 					"featured_image": {
-						"id": "01KQY6923HQZ1R20E2SYG4823J",
-						"src": "/_emdash/api/media/file/01KQY691VD4KJ31816J9E733ZP.png",
-						"alt": "Cloudflare EmDash 技術研究報告",
-						"width": 2752,
-						"height": 1536
+						"$media": {
+							"url": "https://raw.githubusercontent.com/phoenix581228/tzu-chi-vibe-coding-emdash/main/assets/cover-images/Gemini_Generated_Image_43xhlx43xhlx43xh.png",
+							"alt": "Cloudflare EmDash 技術研究報告 / Technical Research Report",
+							"filename": "Gemini_Generated_Image_43xhlx43xhlx43xh.png"
+						}
 					}
 				}
 			},
@@ -1492,11 +1492,11 @@
 						}
 					],
 					"featured_image": {
-						"id": "01KQY69J3CJAEAVNF2A84GADJF",
-						"src": "/_emdash/api/media/file/01KQY69HWTKK67EMPDBYN3NMMC.png",
-						"alt": "EmDash 程式碼深度分析",
-						"width": 2752,
-						"height": 1536
+						"$media": {
+							"url": "https://raw.githubusercontent.com/phoenix581228/tzu-chi-vibe-coding-emdash/main/assets/cover-images/Gemini_Generated_Image_t1julrt1julrt1ju.png",
+							"alt": "EmDash 程式碼深度分析 / Code Deep Analysis",
+							"filename": "Gemini_Generated_Image_t1julrt1julrt1ju.png"
+						}
 					}
 				}
 			},
@@ -1728,11 +1728,11 @@
 						}
 					],
 					"featured_image": {
-						"id": "01KQY69JPCPM4P2GWKTVFGX82M",
-						"src": "/_emdash/api/media/file/01KQY69JG25QEY6211NQZ5NSBT.png",
-						"alt": "EmDash 內建 7 個 Claude Code Skills",
-						"width": 2752,
-						"height": 1536
+						"$media": {
+							"url": "https://raw.githubusercontent.com/phoenix581228/tzu-chi-vibe-coding-emdash/main/assets/cover-images/Gemini_Generated_Image_nm0a88nm0a88nm0a.png",
+							"alt": "EmDash 內建 7 個 Claude Code Skills / 7 Built-in Skills",
+							"filename": "Gemini_Generated_Image_nm0a88nm0a88nm0a.png"
+						}
 					}
 				}
 			},
@@ -2036,11 +2036,11 @@
 						}
 					],
 					"featured_image": {
-						"id": "01KQY6923HQZ1R20E2SYG4823J",
-						"src": "/_emdash/api/media/file/01KQY691VD4KJ31816J9E733ZP.png",
-						"alt": "Cloudflare EmDash 技術研究報告",
-						"width": 2752,
-						"height": 1536
+						"$media": {
+							"url": "https://raw.githubusercontent.com/phoenix581228/tzu-chi-vibe-coding-emdash/main/assets/cover-images/Gemini_Generated_Image_43xhlx43xhlx43xh.png",
+							"alt": "Cloudflare EmDash 技術研究報告 / Technical Research Report",
+							"filename": "Gemini_Generated_Image_43xhlx43xhlx43xh.png"
+						}
 					}
 				}
 			},
@@ -2308,11 +2308,11 @@
 						}
 					],
 					"featured_image": {
-						"id": "01KQY69J3CJAEAVNF2A84GADJF",
-						"src": "/_emdash/api/media/file/01KQY69HWTKK67EMPDBYN3NMMC.png",
-						"alt": "EmDash 程式碼深度分析",
-						"width": 2752,
-						"height": 1536
+						"$media": {
+							"url": "https://raw.githubusercontent.com/phoenix581228/tzu-chi-vibe-coding-emdash/main/assets/cover-images/Gemini_Generated_Image_t1julrt1julrt1ju.png",
+							"alt": "EmDash 程式碼深度分析 / Code Deep Analysis",
+							"filename": "Gemini_Generated_Image_t1julrt1julrt1ju.png"
+						}
 					}
 				}
 			},
@@ -2544,11 +2544,11 @@
 						}
 					],
 					"featured_image": {
-						"id": "01KQY69JPCPM4P2GWKTVFGX82M",
-						"src": "/_emdash/api/media/file/01KQY69JG25QEY6211NQZ5NSBT.png",
-						"alt": "EmDash 內建 7 個 Claude Code Skills",
-						"width": 2752,
-						"height": 1536
+						"$media": {
+							"url": "https://raw.githubusercontent.com/phoenix581228/tzu-chi-vibe-coding-emdash/main/assets/cover-images/Gemini_Generated_Image_nm0a88nm0a88nm0a.png",
+							"alt": "EmDash 內建 7 個 Claude Code Skills / 7 Built-in Skills",
+							"filename": "Gemini_Generated_Image_nm0a88nm0a88nm0a.png"
+						}
 					}
 				}
 			},
@@ -3104,11 +3104,11 @@
 						}
 					],
 					"featured_image": {
-						"id": "01KQY84DRHWBWXPMA2CA83JCP7",
-						"src": "/_emdash/api/media/file/01KQY84DKV77SNJ3PGH0GRTD3M.png",
-						"alt": "用 EmDash plugin 解決 markdown 渲染相容性問題",
-						"width": 2752,
-						"height": 1536
+						"$media": {
+							"url": "https://raw.githubusercontent.com/phoenix581228/tzu-chi-vibe-coding-emdash/main/assets/cover-images/research-plugin-claude-generated.png",
+							"alt": "用 EmDash plugin 解決 markdown 渲染相容性問題 / Solving markdown rendering with an EmDash plugin",
+							"filename": "research-plugin-claude-generated.png"
+						}
 					}
 				}
 			},
@@ -3628,11 +3628,11 @@
 						}
 					],
 					"featured_image": {
-						"id": "01KQY84DRHWBWXPMA2CA83JCP7",
-						"src": "/_emdash/api/media/file/01KQY84DKV77SNJ3PGH0GRTD3M.png",
-						"alt": "用 EmDash plugin 解決 markdown 渲染相容性問題",
-						"width": 2752,
-						"height": 1536
+						"$media": {
+							"url": "https://raw.githubusercontent.com/phoenix581228/tzu-chi-vibe-coding-emdash/main/assets/cover-images/research-plugin-claude-generated.png",
+							"alt": "用 EmDash plugin 解決 markdown 渲染相容性問題 / Solving markdown rendering with an EmDash plugin",
+							"filename": "research-plugin-claude-generated.png"
+						}
 					}
 				}
 			}
